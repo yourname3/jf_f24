@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://2umuaphrp4cm"]
+
+[ext_resource type="PackedScene" uid="uid://bh0t3hy5ivsas" path="res://player/player.tscn" id="1_cowt7"]
+[ext_resource type="Texture2D" uid="uid://bgmcj6c8rga28" path="res://tiles/grass.png" id="2_d1xmb"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8782s"]
+texture = ExtResource("2_d1xmb")
+texture_region_size = Vector2i(288, 288)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-128, -128, 128, -128, 128, 128, -128, 128)
+
+[sub_resource type="TileSet" id="TileSet_no3vj"]
+tile_size = Vector2i(256, 256)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_8782s")
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_cowt7")]
+position = Vector2(-67, -614)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(0.303, 0.303)
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_no3vj")
+format = 2
+layer_0/tile_data = PackedInt32Array(65533, 0, 0, 65534, 0, 0, 65535, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 65532, 0, 0, 65531, 0, 0, 65530, 0, 0, 65529, 0, 0, -65530, 0, 0, -131066, 0, 0, -196602, 0, 0, -262138, 0, 0, 65522, 0, 0, 65521, 0, 0, 65520, 0, 0, 65519, 0, 0, 65518, 0, 0, 65517, 0, 0)
