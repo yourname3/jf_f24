@@ -66,10 +66,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -317.0
-offset_top = 144.0
-offset_right = -77.0
-offset_bottom = 304.0
+offset_left = -291.0
+offset_top = 143.0
+offset_right = -51.0
+offset_bottom = 303.0
 grow_horizontal = 2
 
 [node name="GalleryEntry2" parent="." instance=ExtResource("2_qpxkv")]
@@ -91,6 +91,6 @@ anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -411.0
 offset_top = 66.0
-offset_right = -371.0
-offset_bottom = 106.0
+offset_right = -171.0
+offset_bottom = 226.0
 grow_horizontal = 2

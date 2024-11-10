@@ -17,7 +17,10 @@ var time = 0.0
 const ANIM_LENGTH = 0.3
 
 @onready var gallery_target = %GalleryTargetPos
-@onready var current_position = position
+@onready var home_left: float = offset_left
+@onready var home_right: float = offset_right
+@onready var home_top: float = offset_top
+@onready var home_bottom: float = offset_bottom
 
 func do_anim(new_anim: Anim):
 	anim = new_anim
@@ -59,9 +62,17 @@ func _process(delta):
 			Anim.None:
 				pass
 			Anim.MoveToExamine:
-				position = current_position.lerp(gallery_target.position, t)
+				offset_left = lerp(home_left, gallery_target.offset_left, t)
+				offset_top = lerp(home_top, gallery_target.offset_top, t)
+				offset_bottom = lerp(home_bottom, gallery_target.offset_bottom, t)
+				offset_right = lerp(home_right, gallery_target.offset_right, t)
+				#position = current_position.lerp(gallery_target.position, t)
 			Anim.MoveBack:
-				position = gallery_target.position.lerp(current_position, t)
+				offset_left = lerp(gallery_target.offset_left, home_left, t)
+				offset_top = lerp(gallery_target.offset_top, home_top, t)
+				offset_bottom = lerp(gallery_target.offset_bottom, home_bottom, t)
+				offset_right = lerp(gallery_target.offset_right, home_right, t)
+				#position = gallery_target.position.lerp(current_position, t)
 			Anim.FadeOut:
 				modulate.a = 1.0 - t
 				if modulate.a < 0.03:
