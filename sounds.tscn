@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://gmll0q18rrun"]
+[gd_scene load_steps=8 format=3 uid="uid://gmll0q18rrun"]
 
 [ext_resource type="Script" path="res://sounds.gd" id="1_ecqd1"]
 [ext_resource type="AudioStream" uid="uid://jp2et6vwubll" path="res://music/music-game.ogg" id="1_xhomy"]
 [ext_resource type="AudioStream" uid="uid://cr7b3oi5k6c2o" path="res://music/music-gallery.ogg" id="2_b0o85"]
 [ext_resource type="AudioStream" uid="uid://c2brdxhay11j8" path="res://sounds/jump_normal.wav" id="4_ebn43"]
 [ext_resource type="AudioStream" uid="uid://dbebg77h8wl1i" path="res://sounds/grab.wav" id="5_1fj5y"]
+[ext_resource type="AudioStream" uid="uid://c746mdo6axj" path="res://sounds/jump_cheese.wav" id="5_cct5g"]
 [ext_resource type="AudioStream" uid="uid://d4ddeb15xo8sx" path="res://sounds/release.wav" id="6_ddqg6"]
 
 [node name="Sounds" type="Node"]
@@ -21,6 +22,11 @@ bus = &"Music"
 
 [node name="JumpNormal" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_ebn43")
+max_polyphony = 8
+bus = &"SFX"
+
+[node name="JumpCheese" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_cct5g")
 max_polyphony = 8
 bus = &"SFX"
 

@@ -4,6 +4,7 @@ extends Node
 @onready var music_gallery = $MusicGallery
 
 @onready var jump_normal = $JumpNormal
+@onready var jump_cheese = $JumpCheese
 @onready var grab = $Grab
 @onready var release = $Release
 

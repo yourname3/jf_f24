@@ -89,6 +89,7 @@ func jump():
 	velocity.y = JUMP_VELOCITY * 1.2
 	
 func cheese_jump():
+	Sounds.jump_cheese.play()
 	jump()
 
 func die():
