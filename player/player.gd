@@ -29,11 +29,13 @@ func update_item(delta):
 			current_held_item.global_position = global_position + Vector2(256 * 0.75, 0) * get_current_direction()
 			current_held_item.release(get_current_direction())
 			current_held_item = null
+			Sounds.release.play()
 	elif Input.is_action_pressed("player_grab"):
 		var items = item_pickup.get_overlapping_bodies()
 		for item in items:
 			if item.pickup():
 				current_held_item = item
+				Sounds.grab.play()
 
 func _physics_process(delta):
 	# Jump is canceled as soon as we let go of the button.
@@ -53,6 +55,7 @@ func _physics_process(delta):
 
 	# Start the jump when the action is just pressed.
 	if Input.is_action_just_pressed("player_jump") and is_on_floor():
+		Sounds.jump_normal.play()
 		jump()
 
 	# Horizontal acceleration
