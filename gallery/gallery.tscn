@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cblppf11p3pox"]
+[gd_scene load_steps=15 format=3 uid="uid://cblppf11p3pox"]
 
 [ext_resource type="Theme" uid="uid://dq1aqm2uflpau" path="res://main_theme.tres" id="1_lb248"]
 [ext_resource type="PackedScene" uid="uid://wjxwruhigke3" path="res://gallery/gallery_entry.tscn" id="2_qpxkv"]
@@ -12,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://1m1xk6w38p1r" path="res://levels/ludicrous.tscn" id="8_q2gpa"]
 [ext_resource type="Texture2D" uid="uid://dsu232d65ugul" path="res://gallery/unfair.png" id="9_7m0lu"]
 [ext_resource type="PackedScene" uid="uid://4u76nef0w6vx" path="res://levels/unfair.tscn" id="10_m6lxw"]
+[ext_resource type="Texture2D" uid="uid://dl6js0tdc6inj" path="res://gallery/obscure.png" id="13_4euqu"]
+[ext_resource type="PackedScene" uid="uid://dbeanrenk7wys" path="res://levels/obscure.tscn" id="14_agbsa"]
 
 [node name="Gallery" type="ColorRect"]
 anchors_preset = 15
@@ -36,7 +38,6 @@ text = "a rat's gallery of unloved levels"
 
 [node name="GalleryDisplay" type="ColorRect" parent="."]
 unique_name_in_owner = true
-visible = false
 layout_mode = 1
 anchors_preset = 13
 anchor_left = 0.5
@@ -61,11 +62,11 @@ offset_right = 417.0
 offset_bottom = -2.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "this level introduces the game and tells you how to play.
+text = "this level is about obscure mechanics in a game. if you know the mechanic, it's not too hard to beat, although it requires somewhat tricky execution.
 
-perhaps play this one first. it introduces the gallery and gives you some context.
+without knowing the mechanic, it's basically impossible.
 
-"
+such levels are sometimes disliked due to the sheer obscurity of the relevant mechanics. but, they are also sometimes well-loved due to the sense of discovery they can give. this level is perhaps the least unloved in the gallery."
 autowrap_mode = 3
 
 [node name="Welcome" parent="." instance=ExtResource("2_qpxkv")]
@@ -162,6 +163,25 @@ such a level is almost completely unplayable in this form. there is nothing inte
 
 however, if the missing information is packaged in novel and surprising ways, such levels can be quite enjoyable. such experiences can be found in \"troll\" levels or games (e.g. Cat Mario)."
 level = ExtResource("10_m6lxw")
+
+[node name="Obscure" parent="." instance=ExtResource("2_qpxkv")]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 223.0
+offset_top = 411.0
+offset_right = 463.0
+offset_bottom = 571.0
+grow_horizontal = 2
+texture = ExtResource("13_4euqu")
+title = "obscure"
+description = "this level is about obscure mechanics in a game. if you know the mechanic, it's not too hard to beat, although it requires somewhat tricky execution.
+
+without knowing the mechanic, it's basically impossible.
+
+such levels are sometimes disliked due to the sheer obscurity of the relevant mechanics. but, they are also sometimes well-loved due to the sense of discovery they can give. this level is perhaps the least unloved in the gallery."
+level = ExtResource("14_agbsa")
 
 [node name="GalleryTargetPos" type="ColorRect" parent="."]
 unique_name_in_owner = true
