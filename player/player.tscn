@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://bh0t3hy5ivsas"]
+[gd_scene load_steps=5 format=3 uid="uid://bh0t3hy5ivsas"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_y7vb8"]
 [ext_resource type="Texture2D" uid="uid://cqyrdjlamlplm" path="res://player/player.png" id="2_hpc42"]
@@ -6,11 +6,23 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_40l7b"]
 size = Vector2(256, 256)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cye7k"]
+size = Vector2(252, 252)
+
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_y7vb8")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite" type="Sprite2D" parent="."]
 texture = ExtResource("2_hpc42")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_40l7b")
+
+[node name="Hazard" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="HazardCollision" type="CollisionShape2D" parent="Hazard"]
+shape = SubResource("RectangleShape2D_cye7k")
+
+[connection signal="body_entered" from="Hazard" to="." method="_on_hazard_body_entered"]
