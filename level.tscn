@@ -46,7 +46,7 @@ sources/1 = SubResource("TileSetAtlasSource_yqwfn")
 sources/2 = SubResource("TileSetAtlasSource_tqjqr")
 sources/3 = SubResource("TileSetAtlasSource_l67m4")
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" groups=["Level"]]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 unique_name_in_owner = true

@@ -5,6 +5,7 @@
 [ext_resource type="AudioStream" uid="uid://cr7b3oi5k6c2o" path="res://music/music-gallery.ogg" id="2_b0o85"]
 
 [node name="Sounds" type="Node"]
+process_mode = 3
 script = ExtResource("1_ecqd1")
 
 [node name="MusicGame" type="AudioStreamPlayer" parent="."]
