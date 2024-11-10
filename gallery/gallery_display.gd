@@ -13,6 +13,9 @@ const ANIM_LENGTH = 0.4
 
 @onready var description = $Description
 
+func _ready():
+	hide()
+
 func fade_in(text: String):
 	anim = Anim.FadeIn
 	time = ANIM_LENGTH

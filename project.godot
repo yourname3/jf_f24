@@ -74,6 +74,7 @@ pause={
 2d_physics/layer_2="Player_Hazard"
 2d_physics/layer_3="Player_Layer_Only"
 2d_physics/layer_4="Item_Layer"
+2d_physics/layer_5="Static_Player_Hazard"
 
 [physics]
 

@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://cblppf11p3pox"]
+[gd_scene load_steps=7 format=3 uid="uid://cblppf11p3pox"]
 
 [ext_resource type="Theme" uid="uid://dq1aqm2uflpau" path="res://main_theme.tres" id="1_lb248"]
 [ext_resource type="PackedScene" uid="uid://wjxwruhigke3" path="res://gallery/gallery_entry.tscn" id="2_qpxkv"]
 [ext_resource type="Script" path="res://gallery/gallery_display.gd" id="2_xe2de"]
 [ext_resource type="PackedScene" uid="uid://tnqy87q5g8b5" path="res://levels/consistency.tscn" id="4_8fn5a"]
+[ext_resource type="Texture2D" uid="uid://ci5s7d2mp3p3c" path="res://gallery/tedium.png" id="5_2e6f5"]
+[ext_resource type="PackedScene" uid="uid://brbbtepfag7rh" path="res://levels/tedium.tscn" id="6_8dpgp"]
 
 [node name="Gallery" type="ColorRect"]
 anchors_preset = 15
@@ -28,7 +30,6 @@ text = "a rat's gallery of unloved levels"
 
 [node name="GalleryDisplay" type="ColorRect" parent="."]
 unique_name_in_owner = true
-visible = false
 layout_mode = 1
 anchors_preset = 13
 anchor_left = 0.5
@@ -53,16 +54,16 @@ offset_right = 417.0
 offset_bottom = -2.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "this level is about the difficulty of being very consistent at a given task.
+text = "this level is purely distilled tedium.
 
-with 40 identical cheese jumps in a row, it takes a 98% consistency at the trick to have even a 50% of beating the level on a given attempt.
+it takes about 5 minutes to beat from start to finish. there is no real mechanical difficulty in this--the only difficulty is the dedication of time.
 
-this level also emphasizes a lack of human intuition about counting. the first 10 jumps feels like more than 10."
+should you waste your time playing a level that has no meaningful content? probably not.
+
+however, it is not dissimilar to a fidget toy--something to idly, mindlessly do while you do smething else. is that worth something?"
 autowrap_mode = 3
-visible_characters = 0
-visible_ratio = 0.0
 
-[node name="GalleryEntry" parent="." instance=ExtResource("2_qpxkv")]
+[node name="Consistency" parent="." instance=ExtResource("2_qpxkv")]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -74,7 +75,7 @@ offset_bottom = 303.0
 grow_horizontal = 2
 level = ExtResource("4_8fn5a")
 
-[node name="GalleryEntry2" parent="." instance=ExtResource("2_qpxkv")]
+[node name="Tedium" parent="." instance=ExtResource("2_qpxkv")]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -84,9 +85,20 @@ offset_top = 143.0
 offset_right = 229.0
 offset_bottom = 303.0
 grow_horizontal = 2
+texture = ExtResource("5_2e6f5")
+title = "tedium"
+description = "this level is purely distilled tedium.
+
+it takes about 5 minutes to beat from start to finish. there is no real mechanical difficulty in this--the only difficulty is the dedication of time.
+
+should you waste your time playing a level that has no meaningful content? probably not.
+
+however, it is not dissimilar to a fidget toy--something to idly, mindlessly do while you do smething else. is that worth something?"
+level = ExtResource("6_8dpgp")
 
 [node name="GalleryTargetPos" type="ColorRect" parent="."]
 unique_name_in_owner = true
+visible = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
