@@ -1,10 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://cblppf11p3pox"]
+[gd_scene load_steps=13 format=3 uid="uid://cblppf11p3pox"]
 
 [ext_resource type="Theme" uid="uid://dq1aqm2uflpau" path="res://main_theme.tres" id="1_lb248"]
 [ext_resource type="PackedScene" uid="uid://wjxwruhigke3" path="res://gallery/gallery_entry.tscn" id="2_qpxkv"]
 [ext_resource type="Script" path="res://gallery/gallery_display.gd" id="2_xe2de"]
 [ext_resource type="PackedScene" uid="uid://tnqy87q5g8b5" path="res://levels/consistency.tscn" id="4_8fn5a"]
 [ext_resource type="Texture2D" uid="uid://ci5s7d2mp3p3c" path="res://gallery/tedium.png" id="5_2e6f5"]
+[ext_resource type="Texture2D" uid="uid://cx7g0deuj11rt" path="res://gallery/welcome.png" id="5_c5c7e"]
+[ext_resource type="PackedScene" uid="uid://l0n72at7bf7y" path="res://levels/welcome.tscn" id="5_mbeup"]
 [ext_resource type="PackedScene" uid="uid://brbbtepfag7rh" path="res://levels/tedium.tscn" id="6_8dpgp"]
 [ext_resource type="Texture2D" uid="uid://buutjs811gh87" path="res://gallery/ludicrous.png" id="7_wvqxj"]
 [ext_resource type="PackedScene" uid="uid://1m1xk6w38p1r" path="res://levels/ludicrous.tscn" id="8_q2gpa"]
@@ -59,22 +61,41 @@ offset_right = 417.0
 offset_bottom = -2.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "this level is unfair. with the information about how to beat it, it is trivial; but learning that information can only be done through trial and error.
+text = "this level introduces the game and tells you how to play.
 
-such a level is almost completely unplayable in this form. there is nothing interesting about learning the missing information.
+perhaps play this one first. it introduces the gallery and gives you some context.
 
-however, if the missing information is packaged in novel and surprising ways, such levels can be quite enjoyable. such experiences can be found in \"troll\" levels or games (e.g. Cat Mario)."
+"
 autowrap_mode = 3
+
+[node name="Welcome" parent="." instance=ExtResource("2_qpxkv")]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -420.0
+offset_top = 115.0
+offset_right = -180.0
+offset_bottom = 275.0
+grow_horizontal = 2
+texture = ExtResource("5_c5c7e")
+title = "welcome"
+description = "this level introduces the game and tells you how to play.
+
+perhaps play this one first. it introduces the gallery and gives you some context.
+
+"
+level = ExtResource("5_mbeup")
 
 [node name="Consistency" parent="." instance=ExtResource("2_qpxkv")]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -446.0
-offset_top = 143.0
-offset_right = -206.0
-offset_bottom = 303.0
+offset_left = -100.0
+offset_top = 110.0
+offset_right = 140.0
+offset_bottom = 270.0
 grow_horizontal = 2
 description = "this level is about the difficulty of being very consistent at a given task.
 
@@ -88,10 +109,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -137.0
-offset_top = 141.0
-offset_right = 103.0
-offset_bottom = 301.0
+offset_left = 218.0
+offset_top = 110.0
+offset_right = 458.0
+offset_bottom = 270.0
 grow_horizontal = 2
 texture = ExtResource("5_2e6f5")
 title = "tedium"
@@ -109,10 +130,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 185.0
-offset_top = 149.0
-offset_right = 425.0
-offset_bottom = 309.0
+offset_left = -427.0
+offset_top = 407.0
+offset_right = -187.0
+offset_bottom = 567.0
 grow_horizontal = 2
 texture = ExtResource("7_wvqxj")
 title = "ludicrous"
@@ -128,10 +149,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -453.0
-offset_top = 417.0
-offset_right = -213.0
-offset_bottom = 577.0
+offset_left = -93.0
+offset_top = 410.0
+offset_right = 147.0
+offset_bottom = 570.0
 grow_horizontal = 2
 texture = ExtResource("9_7m0lu")
 title = "unfair"
