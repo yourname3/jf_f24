@@ -27,6 +27,9 @@ func _physics_process(delta):
 		$Sprite.scale.x = sign(velocity.x)
 
 	move_and_slide()
+	
+func cheese_jump():
+	velocity.y = JUMP_VELOCITY
 
 func die():
 	#get_tree().change_scene_to_packed(get_tree().current_scene)

@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://cq867g6yqpo1x"]
+[gd_scene load_steps=5 format=3 uid="uid://cq867g6yqpo1x"]
 
 [ext_resource type="Texture2D" uid="uid://cnbmen1vwlwha" path="res://cheese/cheese.png" id="1_ndgmh"]
 [ext_resource type="Script" path="res://cheese/cheese.gd" id="1_qf4rk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vtyv4"]
-size = Vector2(256, 256)
+size = Vector2(256, 130)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h3vb4"]
+size = Vector2(212, 126)
 
 [node name="Cheese" type="CharacterBody2D"]
 collision_layer = 0
@@ -14,4 +17,15 @@ script = ExtResource("1_qf4rk")
 texture = ExtResource("1_ndgmh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 63)
 shape = SubResource("RectangleShape2D_vtyv4")
+
+[node name="PlayerOnCheese" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerOnCheese"]
+position = Vector2(0, -64)
+shape = SubResource("RectangleShape2D_h3vb4")
+
+[connection signal="body_entered" from="PlayerOnCheese" to="." method="_on_player_on_cheese_body_entered"]
