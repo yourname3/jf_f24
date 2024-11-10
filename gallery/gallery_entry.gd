@@ -24,6 +24,9 @@ const ANIM_LENGTH = 0.3
 
 @export var level: PackedScene
 
+func _ready():
+	$Title.text = '"' + title + '"'
+	
 func do_anim(new_anim: Anim):
 	anim = new_anim
 	time = ANIM_LENGTH

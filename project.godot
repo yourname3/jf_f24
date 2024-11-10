@@ -20,6 +20,11 @@ config/icon="res://icon.svg"
 SceneTransition="*res://scene_transition.tscn"
 Globals="*res://globals.gd"
 
+[display]
+
+window/stretch/mode="canvas_items"
+window/stretch/aspect="keep_height"
+
 [file_customization]
 
 folder_colors={
