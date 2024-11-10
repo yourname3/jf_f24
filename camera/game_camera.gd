@@ -9,8 +9,8 @@ func go(delta):
 	
 	global_position = player.global_position
 	
-	var half_y = get_viewport().size.y * 0.5 / zoom.y
-	var half_x = get_viewport().size.x * 0.5 / zoom.x
+	var half_y = get_viewport().get_visible_rect().size.y * 0.5 / zoom.y
+	var half_x = get_viewport().get_visible_rect().size.x * 0.5 / zoom.x
 	
 	for limit in get_tree().get_nodes_in_group("CameraLowestY"):
 		var limit_pos = limit.global_position.y - half_y
