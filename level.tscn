@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://2umuaphrp4cm"]
+[gd_scene load_steps=10 format=3 uid="uid://2umuaphrp4cm"]
 
 [ext_resource type="PackedScene" uid="uid://bh0t3hy5ivsas" path="res://player/player.tscn" id="1_cowt7"]
+[ext_resource type="Script" path="res://camera/game_camera.gd" id="1_srbx4"]
 [ext_resource type="Texture2D" uid="uid://bgmcj6c8rga28" path="res://tiles/grass.png" id="2_d1xmb"]
 [ext_resource type="Texture2D" uid="uid://b4kl1rwx8bk6n" path="res://tiles/spike.png" id="3_5lhue"]
 [ext_resource type="PackedScene" uid="uid://cq867g6yqpo1x" path="res://cheese/cheese.tscn" id="4_wcusi"]
@@ -28,11 +29,15 @@ sources/1 = SubResource("TileSetAtlasSource_yqwfn")
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource("1_cowt7")]
+[node name="Camera2D" type="Camera2D" parent="."]
+unique_name_in_owner = true
 position = Vector2(3216, -923)
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(0.303, 0.303)
+script = ExtResource("1_srbx4")
+
+[node name="Player" parent="." instance=ExtResource("1_cowt7")]
+unique_name_in_owner = true
+position = Vector2(3216, -923)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_no3vj")

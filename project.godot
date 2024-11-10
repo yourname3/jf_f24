@@ -24,6 +24,10 @@ folder_colors={
 "res://tiles/": "green"
 }
 
+[global_group]
+
+CameraLowestY=""
+
 [input]
 
 player_left={

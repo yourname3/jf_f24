@@ -4,6 +4,8 @@ const H_ACCEL = 256 * 16
 const SPEED = 256.0 * 6
 const JUMP_VELOCITY = -2000.0
 
+@onready var camera = %Camera2D
+
 @onready var sprite = $Sprite
 @onready var item_pickup = $ItemPickup
 
@@ -67,6 +69,8 @@ func _physics_process(delta):
 
 	move_and_slide()
 	update_item(delta)
+	
+	camera.go(delta)
 	
 func jump():
 	jump_timer = JUMP_TIMER_MAX
