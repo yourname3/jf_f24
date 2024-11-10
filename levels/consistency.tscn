@@ -8,155 +8,161 @@
 [node name="CameraLowY" type="Marker2D" parent="." index="0" groups=["CameraLowestY"]]
 position = Vector2(0, 1024)
 
-[node name="Player" parent="." index="2"]
+[node name="CameraLeft" type="Marker2D" parent="." index="1" groups=["CameraLeftmost"]]
+position = Vector2(-1024, 576)
+
+[node name="CameraRight" type="Marker2D" parent="." index="2" groups=["CameraRightmost"]]
+position = Vector2(63744, 384)
+
+[node name="Player" parent="." index="4"]
 position = Vector2(-896, -128)
 
-[node name="TileMap" parent="." index="3"]
+[node name="TileMap" parent="." index="5"]
 layer_0/tile_data = PackedInt32Array(65533, 0, 0, 65534, 0, 0, 65535, 0, 0, 0, 0, 0, 1, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 65532, 0, 0, -196604, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 14, 0, 0, 15, 0, 0, 16, 0, 0, 19, 0, 0, -65517, 0, 0, -131053, 0, 0, -196589, 0, 0, 65542, 0, 0, 65545, 0, 0, 65546, 0, 0, 65547, 0, 0, 65550, 0, 0, -65532, 0, 0, -131068, 0, 0, -262140, 0, 0, -327676, 0, 0, -393212, 1, 0, -393207, 1, 0, -327671, 0, 0, -262135, 0, 0, -196599, 0, 0, -131063, 0, 0, -65527, 0, 0, -393202, 1, 0, -327666, 0, 0, -262130, 0, 0, -196594, 0, 0, -131058, 0, 0, -65522, 0, 0, -393197, 1, 0, -327661, 0, 0, -262125, 0, 0, 20, 0, 0, 21, 0, 0, -393192, 1, 0, -327656, 0, 0, -262120, 0, 0, -196584, 0, 0, -131048, 0, 0, -65512, 0, 0, 24, 0, 0, 25, 0, 0, 26, 0, 0, -393187, 1, 0, -327651, 0, 0, -262115, 0, 0, -196579, 0, 0, -131043, 0, 0, -65507, 0, 0, 29, 0, 0, 30, 0, 0, 31, 0, 0, -393182, 1, 0, -327646, 0, 0, -262110, 0, 0, -196574, 0, 0, -131038, 0, 0, -65502, 0, 0, 34, 0, 0, 35, 0, 0, 36, 0, 0, -393177, 1, 0, -327641, 0, 0, -262105, 0, 0, -196569, 0, 0, -131033, 0, 0, -65497, 0, 0, 39, 0, 0, 40, 0, 0, 41, 0, 0, -393172, 1, 0, -327636, 0, 0, -262100, 0, 0, -196564, 0, 0, -131028, 0, 0, -65492, 0, 0, 44, 0, 0, 45, 0, 0, 46, 0, 0, -393167, 1, 0, -327631, 0, 0, -262095, 0, 0, -196559, 0, 0, -131023, 0, 0, -65487, 0, 0, 49, 0, 0, 50, 0, 0, 51, 0, 0, -393162, 1, 0, -327626, 0, 0, -262090, 0, 0, -196554, 0, 0, -131018, 0, 0, -65482, 0, 0, 54, 0, 0, 55, 0, 0, 56, 0, 0, -393157, 1, 0, -327621, 0, 0, -262085, 0, 0, -196549, 0, 0, -131013, 0, 0, -65477, 0, 0, 59, 0, 0, 60, 0, 0, 61, 0, 0, -393152, 1, 0, -327616, 0, 0, -262080, 0, 0, -196544, 0, 0, -131008, 0, 0, -65472, 0, 0, 64, 0, 0, 65, 0, 0, 66, 0, 0, -393147, 1, 0, -327611, 0, 0, -262075, 0, 0, -196539, 0, 0, -131003, 0, 0, -65467, 0, 0, 69, 0, 0, 70, 0, 0, 71, 0, 0, -393142, 1, 0, -327606, 0, 0, -262070, 0, 0, -196534, 0, 0, -130998, 0, 0, -65462, 0, 0, 74, 0, 0, 75, 0, 0, 76, 0, 0, -393137, 1, 0, -327601, 0, 0, -262065, 0, 0, -196529, 0, 0, -130993, 0, 0, -65457, 0, 0, 79, 0, 0, 80, 0, 0, 81, 0, 0, -393132, 1, 0, -327596, 0, 0, -262060, 0, 0, -196524, 0, 0, -130988, 0, 0, -65452, 0, 0, 84, 0, 0, 85, 0, 0, 86, 0, 0, -393127, 1, 0, -327591, 0, 0, -262055, 0, 0, -196519, 0, 0, -130983, 0, 0, -65447, 0, 0, 89, 0, 0, 90, 0, 0, 91, 0, 0, -393122, 1, 0, -327586, 0, 0, -262050, 0, 0, -196514, 0, 0, -130978, 0, 0, -65442, 0, 0, 94, 0, 0, 95, 0, 0, 96, 0, 0, -393117, 1, 0, -327581, 0, 0, -262045, 0, 0, -196509, 0, 0, -130973, 0, 0, -65437, 0, 0, 99, 0, 0, 100, 0, 0, 101, 0, 0, -393112, 1, 0, -327576, 0, 0, -262040, 0, 0, -196504, 0, 0, -130968, 0, 0, -65432, 0, 0, 104, 0, 0, 105, 0, 0, 106, 0, 0, -393107, 1, 0, -327571, 0, 0, -262035, 0, 0, -196499, 0, 0, -130963, 0, 0, -65427, 0, 0, 109, 0, 0, 110, 0, 0, 111, 0, 0, -393102, 1, 0, -327566, 0, 0, -262030, 0, 0, -196494, 0, 0, -130958, 0, 0, -65422, 0, 0, 114, 0, 0, 115, 0, 0, 116, 0, 0, -393097, 1, 0, -327561, 0, 0, -262025, 0, 0, -196489, 0, 0, -130953, 0, 0, -65417, 0, 0, 119, 0, 0, 120, 0, 0, 121, 0, 0, -393092, 1, 0, -327556, 0, 0, -262020, 0, 0, -196484, 0, 0, -130948, 0, 0, -65412, 0, 0, 124, 0, 0, 125, 0, 0, 126, 0, 0, -393087, 1, 0, -327551, 0, 0, -262015, 0, 0, -196479, 0, 0, -130943, 0, 0, -65407, 0, 0, 129, 0, 0, 130, 0, 0, 131, 0, 0, -393082, 1, 0, -327546, 0, 0, -262010, 0, 0, -196474, 0, 0, -130938, 0, 0, -65402, 0, 0, 134, 0, 0, 135, 0, 0, 136, 0, 0, -393077, 1, 0, -327541, 0, 0, -262005, 0, 0, -196469, 0, 0, -130933, 0, 0, -65397, 0, 0, 139, 0, 0, 140, 0, 0, 141, 0, 0, -393072, 1, 0, -327536, 0, 0, -262000, 0, 0, -196464, 0, 0, -130928, 0, 0, -65392, 0, 0, 144, 0, 0, 145, 0, 0, 146, 0, 0, -393067, 1, 0, -327531, 0, 0, -261995, 0, 0, -196459, 0, 0, -130923, 0, 0, -65387, 0, 0, 149, 0, 0, 150, 0, 0, 151, 0, 0, -393062, 1, 0, -327526, 0, 0, -261990, 0, 0, -196454, 0, 0, -130918, 0, 0, -65382, 0, 0, 154, 0, 0, 155, 0, 0, 156, 0, 0, -393057, 1, 0, -327521, 0, 0, -261985, 0, 0, -196449, 0, 0, -130913, 0, 0, -65377, 0, 0, 159, 0, 0, 160, 0, 0, 161, 0, 0, -393052, 1, 0, -327516, 0, 0, -261980, 0, 0, -196444, 0, 0, -130908, 0, 0, -65372, 0, 0, 164, 0, 0, 165, 0, 0, 166, 0, 0, -393047, 1, 0, -327511, 0, 0, -261975, 0, 0, -196439, 0, 0, -130903, 0, 0, -65367, 0, 0, 169, 0, 0, 170, 0, 0, 171, 0, 0, -393042, 1, 0, -327506, 0, 0, -261970, 0, 0, -196434, 0, 0, -130898, 0, 0, -65362, 0, 0, 174, 0, 0, 175, 0, 0, 176, 0, 0, -393037, 1, 0, -327501, 0, 0, -261965, 0, 0, -196429, 0, 0, -130893, 0, 0, -65357, 0, 0, 179, 0, 0, 180, 0, 0, 181, 0, 0, -393032, 1, 0, -327496, 0, 0, -261960, 0, 0, -196424, 0, 0, -130888, 0, 0, -65352, 0, 0, 184, 0, 0, 185, 0, 0, 186, 0, 0, -393027, 1, 0, -327491, 0, 0, -261955, 0, 0, -196419, 0, 0, -130883, 0, 0, -65347, 0, 0, 189, 0, 0, 190, 0, 0, 191, 0, 0, -393022, 1, 0, -327486, 0, 0, -261950, 0, 0, -196414, 0, 0, -130878, 0, 0, -65342, 0, 0, 194, 0, 0, 195, 0, 0, 196, 0, 0, -393017, 1, 0, -327481, 0, 0, -261945, 0, 0, -196409, 0, 0, -130873, 0, 0, -65337, 0, 0, 199, 0, 0, 200, 0, 0, 201, 0, 0, -393012, 1, 0, -327476, 0, 0, -261940, 0, 0, -196404, 0, 0, -130868, 0, 0, -65332, 0, 0, 204, 0, 0, 205, 0, 0, 206, 0, 0, -393007, 1, 0, -327471, 0, 0, -261935, 0, 0, -196399, 0, 0, -130863, 0, 0, -65327, 0, 0, 209, 0, 0, 210, 0, 0, 211, 0, 0, -393002, 1, 0, -327466, 0, 0, -261930, 0, 0, -196394, 0, 0, -130858, 0, 0, -65322, 0, 0, 214, 0, 0, 215, 0, 0, 216, 0, 0, -392997, 1, 0, -327461, 0, 0, -261925, 0, 0, -196389, 0, 0, -130853, 0, 0, -65317, 0, 0, 219, 0, 0, 220, 0, 0, 221, 0, 0, -392992, 1, 0, -327456, 0, 0, -261920, 0, 0, -196384, 0, 0, -130848, 0, 0, -65312, 0, 0, 224, 0, 0, 225, 0, 0, 226, 0, 0, -392987, 1, 0, -327451, 0, 0, -261915, 0, 0, -196379, 0, 0, -130843, 0, 0, -65307, 0, 0, 229, 0, 0, 230, 0, 0, 231, 0, 0, -392982, 1, 0, -327446, 0, 0, -261910, 0, 0, -196374, 0, 0, -130838, 0, 0, -65302, 0, 0, 234, 0, 0, 235, 0, 0, 236, 0, 0, -392977, 1, 0, -327441, 0, 0, -261905, 0, 0, -196369, 0, 0, -130833, 0, 0, -65297, 0, 0, 239, 0, 0, 240, 0, 0, 241, 0, 0, 242, 0, 0, 243, 0, 0, 244, 0, 0, 245, 0, 0, 246, 0, 0, 247, 0, 0, 248, 0, 0, 131068, 0, 0, 131069, 0, 0, 131070, 0, 0, 131071, 0, 0, 65536, 0, 0, 65537, 0, 0, 196604, 0, 0, 196605, 0, 0, 196606, 0, 0, 196607, 0, 0, 131072, 0, 0, 131073, 0, 0, 262140, 0, 0, 262141, 0, 0, 262142, 0, 0, 262143, 0, 0, 196608, 0, 0, 196609, 0, 0, 65540, 0, 0, 131076, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 131078, 0, 0, 65541, 0, 0, 131077, 0, 0, 131081, 0, 0, 196617, 0, 0, 196618, 0, 0, 196619, 0, 0, 131083, 0, 0, 131082, 0, 0, 131086, 0, 0, 196622, 0, 0, 196623, 0, 0, 196624, 0, 0, 131088, 0, 0, 65552, 0, 0, 65551, 0, 0, 131087, 0, 0, 65555, 0, 0, 131091, 0, 0, 196627, 0, 0, 196628, 0, 0, 196629, 0, 0, 131093, 0, 0, 65557, 0, 0, 65556, 0, 0, 131092, 0, 0, 65560, 0, 0, 131096, 0, 0, 196632, 0, 0, 196633, 0, 0, 196634, 0, 0, 131098, 0, 0, 65562, 0, 0, 65561, 0, 0, 131097, 0, 0, 65565, 0, 0, 131101, 0, 0, 196637, 0, 0, 196638, 0, 0, 196639, 0, 0, 131103, 0, 0, 65567, 0, 0, 65566, 0, 0, 131102, 0, 0, 65570, 0, 0, 131106, 0, 0, 196642, 0, 0, 65571, 0, 0, 131107, 0, 0, 196643, 0, 0, 65572, 0, 0, 131108, 0, 0, 196644, 0, 0, 65575, 0, 0, 131111, 0, 0, 196647, 0, 0, 65576, 0, 0, 131112, 0, 0, 196648, 0, 0, 65577, 0, 0, 131113, 0, 0, 196649, 0, 0, 65580, 0, 0, 131116, 0, 0, 196652, 0, 0, 65581, 0, 0, 131117, 0, 0, 196653, 0, 0, 65582, 0, 0, 131118, 0, 0, 196654, 0, 0, 65585, 0, 0, 131121, 0, 0, 196657, 0, 0, 65586, 0, 0, 131122, 0, 0, 196658, 0, 0, 65587, 0, 0, 131123, 0, 0, 196659, 0, 0, 65590, 0, 0, 131126, 0, 0, 196662, 0, 0, 65591, 0, 0, 131127, 0, 0, 196663, 0, 0, 65592, 0, 0, 131128, 0, 0, 196664, 0, 0, 65595, 0, 0, 131131, 0, 0, 196667, 0, 0, 65596, 0, 0, 131132, 0, 0, 196668, 0, 0, 65597, 0, 0, 131133, 0, 0, 196669, 0, 0, 65600, 0, 0, 131136, 0, 0, 196672, 0, 0, 65601, 0, 0, 131137, 0, 0, 196673, 0, 0, 65602, 0, 0, 131138, 0, 0, 196674, 0, 0, 65605, 0, 0, 131141, 0, 0, 196677, 0, 0, 65606, 0, 0, 131142, 0, 0, 196678, 0, 0, 65607, 0, 0, 131143, 0, 0, 196679, 0, 0, 65610, 0, 0, 131146, 0, 0, 196682, 0, 0, 65611, 0, 0, 131147, 0, 0, 196683, 0, 0, 65612, 0, 0, 131148, 0, 0, 196684, 0, 0, 65615, 0, 0, 131151, 0, 0, 196687, 0, 0, 65616, 0, 0, 131152, 0, 0, 196688, 0, 0, 65617, 0, 0, 131153, 0, 0, 196689, 0, 0, 65620, 0, 0, 131156, 0, 0, 196692, 0, 0, 65621, 0, 0, 131157, 0, 0, 196693, 0, 0, 65622, 0, 0, 131158, 0, 0, 196694, 0, 0, 65625, 0, 0, 131161, 0, 0, 196697, 0, 0, 65626, 0, 0, 131162, 0, 0, 196698, 0, 0, 65627, 0, 0, 131163, 0, 0, 196699, 0, 0, 65630, 0, 0, 131166, 0, 0, 196702, 0, 0, 65631, 0, 0, 131167, 0, 0, 196703, 0, 0, 65632, 0, 0, 131168, 0, 0, 196704, 0, 0, 65635, 0, 0, 131171, 0, 0, 196707, 0, 0, 65636, 0, 0, 131172, 0, 0, 196708, 0, 0, 65637, 0, 0, 131173, 0, 0, 196709, 0, 0, 65640, 0, 0, 131176, 0, 0, 196712, 0, 0, 65641, 0, 0, 131177, 0, 0, 196713, 0, 0, 65642, 0, 0, 131178, 0, 0, 196714, 0, 0, 65645, 0, 0, 131181, 0, 0, 196717, 0, 0, 65646, 0, 0, 131182, 0, 0, 196718, 0, 0, 65647, 0, 0, 131183, 0, 0, 196719, 0, 0, 65650, 0, 0, 131186, 0, 0, 196722, 0, 0, 65651, 0, 0, 131187, 0, 0, 196723, 0, 0, 65652, 0, 0, 131188, 0, 0, 196724, 0, 0, 65655, 0, 0, 131191, 0, 0, 196727, 0, 0, 65656, 0, 0, 131192, 0, 0, 196728, 0, 0, 65657, 0, 0, 131193, 0, 0, 196729, 0, 0, 65660, 0, 0, 131196, 0, 0, 196732, 0, 0, 65661, 0, 0, 131197, 0, 0, 196733, 0, 0, 65662, 0, 0, 131198, 0, 0, 196734, 0, 0, 65665, 0, 0, 131201, 0, 0, 196737, 0, 0, 65666, 0, 0, 131202, 0, 0, 196738, 0, 0, 65667, 0, 0, 131203, 0, 0, 196739, 0, 0, 65670, 0, 0, 131206, 0, 0, 196742, 0, 0, 65671, 0, 0, 131207, 0, 0, 196743, 0, 0, 65672, 0, 0, 131208, 0, 0, 196744, 0, 0, 65675, 0, 0, 131211, 0, 0, 196747, 0, 0, 65676, 0, 0, 131212, 0, 0, 196748, 0, 0, 65677, 0, 0, 131213, 0, 0, 196749, 0, 0, 65680, 0, 0, 131216, 0, 0, 196752, 0, 0, 65681, 0, 0, 131217, 0, 0, 196753, 0, 0, 65682, 0, 0, 131218, 0, 0, 196754, 0, 0, 65685, 0, 0, 131221, 0, 0, 196757, 0, 0, 65686, 0, 0, 131222, 0, 0, 196758, 0, 0, 65687, 0, 0, 131223, 0, 0, 196759, 0, 0, 65690, 0, 0, 131226, 0, 0, 196762, 0, 0, 65691, 0, 0, 131227, 0, 0, 196763, 0, 0, 65692, 0, 0, 131228, 0, 0, 196764, 0, 0, 65695, 0, 0, 131231, 0, 0, 196767, 0, 0, 65696, 0, 0, 131232, 0, 0, 196768, 0, 0, 65697, 0, 0, 131233, 0, 0, 196769, 0, 0, 65700, 0, 0, 131236, 0, 0, 196772, 0, 0, 65701, 0, 0, 131237, 0, 0, 196773, 0, 0, 65702, 0, 0, 131238, 0, 0, 196774, 0, 0, 65705, 0, 0, 131241, 0, 0, 196777, 0, 0, 65706, 0, 0, 131242, 0, 0, 196778, 0, 0, 65707, 0, 0, 131243, 0, 0, 196779, 0, 0, 65710, 0, 0, 131246, 0, 0, 196782, 0, 0, 65711, 0, 0, 131247, 0, 0, 196783, 0, 0, 65712, 0, 0, 131248, 0, 0, 196784, 0, 0, 65715, 0, 0, 131251, 0, 0, 196787, 0, 0, 65716, 0, 0, 131252, 0, 0, 196788, 0, 0, 65717, 0, 0, 131253, 0, 0, 196789, 0, 0, 65720, 0, 0, 131256, 0, 0, 196792, 0, 0, 65721, 0, 0, 131257, 0, 0, 196793, 0, 0, 65722, 0, 0, 131258, 0, 0, 196794, 0, 0, 65725, 0, 0, 131261, 0, 0, 196797, 0, 0, 65726, 0, 0, 131262, 0, 0, 196798, 0, 0, 65727, 0, 0, 131263, 0, 0, 196799, 0, 0, 65730, 0, 0, 131266, 0, 0, 196802, 0, 0, 65731, 0, 0, 131267, 0, 0, 196803, 0, 0, 65732, 0, 0, 131268, 0, 0, 196804, 0, 0, 65735, 0, 0, 131271, 0, 0, 196807, 0, 0, 65736, 0, 0, 131272, 0, 0, 196808, 0, 0, 65737, 0, 0, 131273, 0, 0, 196809, 0, 0, 65740, 0, 0, 131276, 0, 0, 196812, 0, 0, 65741, 0, 0, 131277, 0, 0, 196813, 0, 0, 65742, 0, 0, 131278, 0, 0, 196814, 0, 0, 65745, 0, 0, 131281, 0, 0, 196817, 0, 0, 65746, 0, 0, 131282, 0, 0, 196818, 0, 0, 65747, 0, 0, 131283, 0, 0, 196819, 0, 0, 65750, 0, 0, 131286, 0, 0, 196822, 0, 0, 65751, 0, 0, 131287, 0, 0, 196823, 0, 0, 65752, 0, 0, 131288, 0, 0, 196824, 0, 0, 65755, 0, 0, 131291, 0, 0, 196827, 0, 0, 65756, 0, 0, 131292, 0, 0, 196828, 0, 0, 65757, 0, 0, 131293, 0, 0, 196829, 0, 0, 65760, 0, 0, 131296, 0, 0, 196832, 0, 0, 65761, 0, 0, 131297, 0, 0, 196833, 0, 0, 65762, 0, 0, 131298, 0, 0, 196834, 0, 0, 65765, 0, 0, 131301, 0, 0, 196837, 0, 0, 65766, 0, 0, 131302, 0, 0, 196838, 0, 0, 65767, 0, 0, 131303, 0, 0, 196839, 0, 0, 65770, 0, 0, 131306, 0, 0, 196842, 0, 0, 65771, 0, 0, 131307, 0, 0, 196843, 0, 0, 65772, 0, 0, 131308, 0, 0, 196844, 0, 0, 65775, 0, 0, 131311, 0, 0, 196847, 0, 0, 65776, 0, 0, 131312, 0, 0, 196848, 0, 0, 65777, 0, 0, 131313, 0, 0, 196849, 0, 0, 65778, 0, 0, 131314, 0, 0, 196850, 0, 0, 196851, 0, 0, 196852, 0, 0, 196853, 0, 0, 196854, 0, 0, 196855, 0, 0, 196856, 0, 0, 131320, 0, 0, 65784, 0, 0, 65783, 0, 0, 65782, 0, 0, 65781, 0, 0, 65780, 0, 0, 65779, 0, 0, 131315, 0, 0, 131316, 0, 0, 131317, 0, 0, 131318, 0, 0, 131319, 0, 0)
 
-[node name="Cheese2" parent="." index="4" instance=ExtResource("2_p1ote")]
+[node name="Cheese2" parent="." index="6" instance=ExtResource("2_p1ote")]
 position = Vector2(1664, -128)
 
-[node name="Cheese3" parent="." index="5" instance=ExtResource("2_p1ote")]
+[node name="Cheese3" parent="." index="7" instance=ExtResource("2_p1ote")]
 position = Vector2(2944, -128)
 
-[node name="Cheese4" parent="." index="6" instance=ExtResource("2_p1ote")]
+[node name="Cheese4" parent="." index="8" instance=ExtResource("2_p1ote")]
 position = Vector2(4224, -128)
 
-[node name="Cheese5" parent="." index="7" instance=ExtResource("2_p1ote")]
+[node name="Cheese5" parent="." index="9" instance=ExtResource("2_p1ote")]
 position = Vector2(5504, -128)
 
-[node name="Cheese6" parent="." index="8" instance=ExtResource("2_p1ote")]
+[node name="Cheese6" parent="." index="10" instance=ExtResource("2_p1ote")]
 position = Vector2(6784, -128)
 
-[node name="Cheese7" parent="." index="9" instance=ExtResource("2_p1ote")]
+[node name="Cheese7" parent="." index="11" instance=ExtResource("2_p1ote")]
 position = Vector2(8064, -128)
 
-[node name="Cheese8" parent="." index="10" instance=ExtResource("2_p1ote")]
+[node name="Cheese8" parent="." index="12" instance=ExtResource("2_p1ote")]
 position = Vector2(9344, -128)
 
-[node name="Cheese9" parent="." index="11" instance=ExtResource("2_p1ote")]
+[node name="Cheese9" parent="." index="13" instance=ExtResource("2_p1ote")]
 position = Vector2(10624, -128)
 
-[node name="Cheese10" parent="." index="12" instance=ExtResource("2_p1ote")]
+[node name="Cheese10" parent="." index="14" instance=ExtResource("2_p1ote")]
 position = Vector2(11904, -128)
 
-[node name="Cheese11" parent="." index="13" instance=ExtResource("2_p1ote")]
+[node name="Cheese11" parent="." index="15" instance=ExtResource("2_p1ote")]
 position = Vector2(13184, -128)
 
-[node name="Cheese12" parent="." index="14" instance=ExtResource("2_p1ote")]
+[node name="Cheese12" parent="." index="16" instance=ExtResource("2_p1ote")]
 position = Vector2(14464, -128)
 
-[node name="Cheese13" parent="." index="15" instance=ExtResource("2_p1ote")]
+[node name="Cheese13" parent="." index="17" instance=ExtResource("2_p1ote")]
 position = Vector2(15744, -128)
 
-[node name="Cheese14" parent="." index="16" instance=ExtResource("2_p1ote")]
+[node name="Cheese14" parent="." index="18" instance=ExtResource("2_p1ote")]
 position = Vector2(17024, -128)
 
-[node name="Cheese15" parent="." index="17" instance=ExtResource("2_p1ote")]
+[node name="Cheese15" parent="." index="19" instance=ExtResource("2_p1ote")]
 position = Vector2(18304, -128)
 
-[node name="Cheese16" parent="." index="18" instance=ExtResource("2_p1ote")]
+[node name="Cheese16" parent="." index="20" instance=ExtResource("2_p1ote")]
 position = Vector2(19584, -128)
 
-[node name="Cheese17" parent="." index="19" instance=ExtResource("2_p1ote")]
+[node name="Cheese17" parent="." index="21" instance=ExtResource("2_p1ote")]
 position = Vector2(20864, -128)
 
-[node name="Cheese18" parent="." index="20" instance=ExtResource("2_p1ote")]
+[node name="Cheese18" parent="." index="22" instance=ExtResource("2_p1ote")]
 position = Vector2(22144, -128)
 
-[node name="Cheese19" parent="." index="21" instance=ExtResource("2_p1ote")]
+[node name="Cheese19" parent="." index="23" instance=ExtResource("2_p1ote")]
 position = Vector2(23424, -128)
 
-[node name="Cheese20" parent="." index="22" instance=ExtResource("2_p1ote")]
+[node name="Cheese20" parent="." index="24" instance=ExtResource("2_p1ote")]
 position = Vector2(24704, -128)
 
-[node name="Cheese21" parent="." index="23" instance=ExtResource("2_p1ote")]
+[node name="Cheese21" parent="." index="25" instance=ExtResource("2_p1ote")]
 position = Vector2(25984, -128)
 
-[node name="Cheese22" parent="." index="24" instance=ExtResource("2_p1ote")]
+[node name="Cheese22" parent="." index="26" instance=ExtResource("2_p1ote")]
 position = Vector2(27264, -128)
 
-[node name="Cheese23" parent="." index="25" instance=ExtResource("2_p1ote")]
+[node name="Cheese23" parent="." index="27" instance=ExtResource("2_p1ote")]
 position = Vector2(28544, -128)
 
-[node name="Cheese24" parent="." index="26" instance=ExtResource("2_p1ote")]
+[node name="Cheese24" parent="." index="28" instance=ExtResource("2_p1ote")]
 position = Vector2(29824, -128)
 
-[node name="Cheese25" parent="." index="27" instance=ExtResource("2_p1ote")]
+[node name="Cheese25" parent="." index="29" instance=ExtResource("2_p1ote")]
 position = Vector2(31104, -128)
 
-[node name="Cheese26" parent="." index="28" instance=ExtResource("2_p1ote")]
+[node name="Cheese26" parent="." index="30" instance=ExtResource("2_p1ote")]
 position = Vector2(32384, -128)
 
-[node name="Cheese27" parent="." index="29" instance=ExtResource("2_p1ote")]
+[node name="Cheese27" parent="." index="31" instance=ExtResource("2_p1ote")]
 position = Vector2(33664, -128)
 
-[node name="Cheese28" parent="." index="30" instance=ExtResource("2_p1ote")]
+[node name="Cheese28" parent="." index="32" instance=ExtResource("2_p1ote")]
 position = Vector2(34944, -128)
 
-[node name="Cheese29" parent="." index="31" instance=ExtResource("2_p1ote")]
+[node name="Cheese29" parent="." index="33" instance=ExtResource("2_p1ote")]
 position = Vector2(36224, -128)
 
-[node name="Cheese30" parent="." index="32" instance=ExtResource("2_p1ote")]
+[node name="Cheese30" parent="." index="34" instance=ExtResource("2_p1ote")]
 position = Vector2(37504, -128)
 
-[node name="Cheese31" parent="." index="33" instance=ExtResource("2_p1ote")]
+[node name="Cheese31" parent="." index="35" instance=ExtResource("2_p1ote")]
 position = Vector2(38784, -128)
 
-[node name="Cheese32" parent="." index="34" instance=ExtResource("2_p1ote")]
+[node name="Cheese32" parent="." index="36" instance=ExtResource("2_p1ote")]
 position = Vector2(40064, -128)
 
-[node name="Cheese33" parent="." index="35" instance=ExtResource("2_p1ote")]
+[node name="Cheese33" parent="." index="37" instance=ExtResource("2_p1ote")]
 position = Vector2(41344, -128)
 
-[node name="Cheese34" parent="." index="36" instance=ExtResource("2_p1ote")]
+[node name="Cheese34" parent="." index="38" instance=ExtResource("2_p1ote")]
 position = Vector2(42624, -128)
 
-[node name="Cheese35" parent="." index="37" instance=ExtResource("2_p1ote")]
+[node name="Cheese35" parent="." index="39" instance=ExtResource("2_p1ote")]
 position = Vector2(43904, -128)
 
-[node name="Cheese36" parent="." index="38" instance=ExtResource("2_p1ote")]
+[node name="Cheese36" parent="." index="40" instance=ExtResource("2_p1ote")]
 position = Vector2(45184, -128)
 
-[node name="Cheese37" parent="." index="39" instance=ExtResource("2_p1ote")]
+[node name="Cheese37" parent="." index="41" instance=ExtResource("2_p1ote")]
 position = Vector2(46464, -128)
 
-[node name="Cheese38" parent="." index="40" instance=ExtResource("2_p1ote")]
+[node name="Cheese38" parent="." index="42" instance=ExtResource("2_p1ote")]
 position = Vector2(47744, -128)
 
-[node name="Cheese39" parent="." index="41" instance=ExtResource("2_p1ote")]
+[node name="Cheese39" parent="." index="43" instance=ExtResource("2_p1ote")]
 position = Vector2(49024, -128)
 
-[node name="Cheese40" parent="." index="42" instance=ExtResource("2_p1ote")]
+[node name="Cheese40" parent="." index="44" instance=ExtResource("2_p1ote")]
 position = Vector2(50304, -128)
 
-[node name="Cheese41" parent="." index="43" instance=ExtResource("2_p1ote")]
+[node name="Cheese41" parent="." index="45" instance=ExtResource("2_p1ote")]
 position = Vector2(51584, -128)
 
-[node name="Cheese42" parent="." index="44" instance=ExtResource("2_p1ote")]
+[node name="Cheese42" parent="." index="46" instance=ExtResource("2_p1ote")]
 position = Vector2(52864, -128)
 
-[node name="Cheese43" parent="." index="45" instance=ExtResource("2_p1ote")]
+[node name="Cheese43" parent="." index="47" instance=ExtResource("2_p1ote")]
 position = Vector2(54144, -128)
 
-[node name="Cheese44" parent="." index="46" instance=ExtResource("2_p1ote")]
+[node name="Cheese44" parent="." index="48" instance=ExtResource("2_p1ote")]
 position = Vector2(55424, -128)
 
-[node name="Cheese45" parent="." index="47" instance=ExtResource("2_p1ote")]
+[node name="Cheese45" parent="." index="49" instance=ExtResource("2_p1ote")]
 position = Vector2(56704, -128)
 
-[node name="Cheese46" parent="." index="48" instance=ExtResource("2_p1ote")]
+[node name="Cheese46" parent="." index="50" instance=ExtResource("2_p1ote")]
 position = Vector2(57984, -128)
 
-[node name="Cheese47" parent="." index="49" instance=ExtResource("2_p1ote")]
+[node name="Cheese47" parent="." index="51" instance=ExtResource("2_p1ote")]
 position = Vector2(59264, -128)
 
-[node name="Cheese48" parent="." index="50" instance=ExtResource("2_p1ote")]
+[node name="Cheese48" parent="." index="52" instance=ExtResource("2_p1ote")]
 position = Vector2(60544, -128)
 
-[node name="Cheese" parent="." index="51"]
+[node name="Cheese" parent="." index="53"]
 position = Vector2(128, -128)
 
-[node name="PauseMenu" parent="." index="52"]
+[node name="PauseMenu" parent="." index="54"]
 visible = false
