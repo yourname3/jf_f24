@@ -50,7 +50,7 @@ sources/3 = SubResource("TileSetAtlasSource_l67m4")
 [node name="Camera2D" type="Camera2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(3216, -923)
-zoom = Vector2(0.303, 0.303)
+zoom = Vector2(0.15, 0.15)
 script = ExtResource("1_srbx4")
 
 [node name="Player" parent="." instance=ExtResource("1_cowt7")]
