@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 folder_colors={
 "res://cheese/": "yellow",
+"res://levels/": "purple",
 "res://player/": "orange",
 "res://tiles/": "green"
 }
@@ -63,3 +64,4 @@ player_grab={
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.289422, 0.463006, 0.749955, 1)

@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://2umuaphrp4cm"]
+[gd_scene load_steps=9 format=3 uid="uid://2umuaphrp4cm"]
 
 [ext_resource type="PackedScene" uid="uid://bh0t3hy5ivsas" path="res://player/player.tscn" id="1_cowt7"]
 [ext_resource type="Texture2D" uid="uid://bgmcj6c8rga28" path="res://tiles/grass.png" id="2_d1xmb"]
 [ext_resource type="Texture2D" uid="uid://b4kl1rwx8bk6n" path="res://tiles/spike.png" id="3_5lhue"]
 [ext_resource type="PackedScene" uid="uid://cq867g6yqpo1x" path="res://cheese/cheese.tscn" id="4_wcusi"]
+[ext_resource type="PackedScene" uid="uid://d0wciam5ebgeq" path="res://pause_menu.tscn" id="5_gx7px"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8782s"]
 texture = ExtResource("2_d1xmb")
@@ -40,3 +41,5 @@ layer_0/tile_data = PackedInt32Array(65533, 0, 0, 65534, 0, 0, 65535, 0, 0, 0, 0
 
 [node name="Cheese" parent="." instance=ExtResource("4_wcusi")]
 position = Vector2(2438, -144)
+
+[node name="PauseMenu" parent="." instance=ExtResource("5_gx7px")]
