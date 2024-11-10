@@ -1,10 +1,9 @@
-[gd_scene load_steps=17 format=3 uid="uid://2umuaphrp4cm"]
+[gd_scene load_steps=16 format=3 uid="uid://2umuaphrp4cm"]
 
 [ext_resource type="PackedScene" uid="uid://bh0t3hy5ivsas" path="res://player/player.tscn" id="1_cowt7"]
 [ext_resource type="Script" path="res://camera/game_camera.gd" id="1_srbx4"]
 [ext_resource type="Texture2D" uid="uid://bgmcj6c8rga28" path="res://tiles/grass.png" id="2_d1xmb"]
 [ext_resource type="Texture2D" uid="uid://b4kl1rwx8bk6n" path="res://tiles/spike.png" id="3_5lhue"]
-[ext_resource type="PackedScene" uid="uid://cq867g6yqpo1x" path="res://cheese/cheese.tscn" id="4_wcusi"]
 [ext_resource type="Texture2D" uid="uid://crpcy3fj43142" path="res://tiles/invis_wall.png" id="5_8fnar"]
 [ext_resource type="PackedScene" uid="uid://d0wciam5ebgeq" path="res://pause_menu.tscn" id="5_gx7px"]
 [ext_resource type="Texture2D" uid="uid://dieb7irsaprdl" path="res://tiles/invis_wall_helper.png" id="6_p6koq"]
@@ -62,9 +61,6 @@ position = Vector2(3216, -923)
 tile_set = SubResource("TileSet_no3vj")
 format = 2
 layer_0/tile_data = PackedInt32Array(65533, 0, 0, 65534, 0, 0, 65535, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 65532, 0, 0, 65531, 0, 0, 65530, 0, 0, 65529, 0, 0, -65530, 0, 0, -131066, 0, 0, -196602, 0, 0, -262138, 0, 0, 65522, 0, 0, 65521, 0, 0, 65520, 0, 0, 65519, 0, 0, 65518, 0, 0, 65517, 0, 0, -196604, 1, 0, -196605, 1, 0, -196606, 1, 0, -65541, 1, 0, -65539, 1, 0, -65542, 0, 0, -65543, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 16, 0, 0, 17, 0, 0, 18, 0, 0, 19, 0, 0, -65517, 0, 0, -131053, 0, 0, -196589, 0, 0, -327674, 0, 0, -393210, 1, 0, 65542, 1, 0, 65543, 1, 0, 65544, 1, 0, 65545, 1, 0, 65546, 1, 0, 65547, 1, 0, 65548, 1, 0, 65549, 1, 0, 65550, 1, 0)
-
-[node name="Cheese" parent="." instance=ExtResource("4_wcusi")]
-position = Vector2(2438, -144)
 
 [node name="WinLayer" type="CanvasLayer" parent="."]
 unique_name_in_owner = true

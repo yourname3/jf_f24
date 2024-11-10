@@ -26,146 +26,146 @@ layer_0/tile_data = PackedInt32Array(65533, 0, 0, 65534, 0, 0, 65535, 0, 0, 0, 0
 [node name="Cheese2" parent="." index="7" instance=ExtResource("2_p1ote")]
 position = Vector2(1664, -128)
 
-[node name="Cheese3" parent="." index="8" instance=ExtResource("2_p1ote")]
+[node name="Cheese49" parent="." index="8" instance=ExtResource("2_p1ote")]
+position = Vector2(128, -128)
+
+[node name="Cheese3" parent="." index="9" instance=ExtResource("2_p1ote")]
 position = Vector2(2944, -128)
 
-[node name="Cheese4" parent="." index="9" instance=ExtResource("2_p1ote")]
+[node name="Cheese4" parent="." index="10" instance=ExtResource("2_p1ote")]
 position = Vector2(4224, -128)
 
-[node name="Cheese5" parent="." index="10" instance=ExtResource("2_p1ote")]
+[node name="Cheese5" parent="." index="11" instance=ExtResource("2_p1ote")]
 position = Vector2(5504, -128)
 
-[node name="Cheese6" parent="." index="11" instance=ExtResource("2_p1ote")]
+[node name="Cheese6" parent="." index="12" instance=ExtResource("2_p1ote")]
 position = Vector2(6784, -128)
 
-[node name="Cheese7" parent="." index="12" instance=ExtResource("2_p1ote")]
+[node name="Cheese7" parent="." index="13" instance=ExtResource("2_p1ote")]
 position = Vector2(8064, -128)
 
-[node name="Cheese8" parent="." index="13" instance=ExtResource("2_p1ote")]
+[node name="Cheese8" parent="." index="14" instance=ExtResource("2_p1ote")]
 position = Vector2(9344, -128)
 
-[node name="Cheese9" parent="." index="14" instance=ExtResource("2_p1ote")]
+[node name="Cheese9" parent="." index="15" instance=ExtResource("2_p1ote")]
 position = Vector2(10624, -128)
 
-[node name="Cheese10" parent="." index="15" instance=ExtResource("2_p1ote")]
+[node name="Cheese10" parent="." index="16" instance=ExtResource("2_p1ote")]
 position = Vector2(11904, -128)
 
-[node name="Cheese11" parent="." index="16" instance=ExtResource("2_p1ote")]
+[node name="Cheese11" parent="." index="17" instance=ExtResource("2_p1ote")]
 position = Vector2(13184, -128)
 
-[node name="Cheese12" parent="." index="17" instance=ExtResource("2_p1ote")]
+[node name="Cheese12" parent="." index="18" instance=ExtResource("2_p1ote")]
 position = Vector2(14464, -128)
 
-[node name="Cheese13" parent="." index="18" instance=ExtResource("2_p1ote")]
+[node name="Cheese13" parent="." index="19" instance=ExtResource("2_p1ote")]
 position = Vector2(15744, -128)
 
-[node name="Cheese14" parent="." index="19" instance=ExtResource("2_p1ote")]
+[node name="Cheese14" parent="." index="20" instance=ExtResource("2_p1ote")]
 position = Vector2(17024, -128)
 
-[node name="Cheese15" parent="." index="20" instance=ExtResource("2_p1ote")]
+[node name="Cheese15" parent="." index="21" instance=ExtResource("2_p1ote")]
 position = Vector2(18304, -128)
 
-[node name="Cheese16" parent="." index="21" instance=ExtResource("2_p1ote")]
+[node name="Cheese16" parent="." index="22" instance=ExtResource("2_p1ote")]
 position = Vector2(19584, -128)
 
-[node name="Cheese17" parent="." index="22" instance=ExtResource("2_p1ote")]
+[node name="Cheese17" parent="." index="23" instance=ExtResource("2_p1ote")]
 position = Vector2(20864, -128)
 
-[node name="Cheese18" parent="." index="23" instance=ExtResource("2_p1ote")]
+[node name="Cheese18" parent="." index="24" instance=ExtResource("2_p1ote")]
 position = Vector2(22144, -128)
 
-[node name="Cheese19" parent="." index="24" instance=ExtResource("2_p1ote")]
+[node name="Cheese19" parent="." index="25" instance=ExtResource("2_p1ote")]
 position = Vector2(23424, -128)
 
-[node name="Cheese20" parent="." index="25" instance=ExtResource("2_p1ote")]
+[node name="Cheese20" parent="." index="26" instance=ExtResource("2_p1ote")]
 position = Vector2(24704, -128)
 
-[node name="Cheese21" parent="." index="26" instance=ExtResource("2_p1ote")]
+[node name="Cheese21" parent="." index="27" instance=ExtResource("2_p1ote")]
 position = Vector2(25984, -128)
 
-[node name="Cheese22" parent="." index="27" instance=ExtResource("2_p1ote")]
+[node name="Cheese22" parent="." index="28" instance=ExtResource("2_p1ote")]
 position = Vector2(27264, -128)
 
-[node name="Cheese23" parent="." index="28" instance=ExtResource("2_p1ote")]
+[node name="Cheese23" parent="." index="29" instance=ExtResource("2_p1ote")]
 position = Vector2(28544, -128)
 
-[node name="Cheese24" parent="." index="29" instance=ExtResource("2_p1ote")]
+[node name="Cheese24" parent="." index="30" instance=ExtResource("2_p1ote")]
 position = Vector2(29824, -128)
 
-[node name="Cheese25" parent="." index="30" instance=ExtResource("2_p1ote")]
+[node name="Cheese25" parent="." index="31" instance=ExtResource("2_p1ote")]
 position = Vector2(31104, -128)
 
-[node name="Cheese26" parent="." index="31" instance=ExtResource("2_p1ote")]
+[node name="Cheese26" parent="." index="32" instance=ExtResource("2_p1ote")]
 position = Vector2(32384, -128)
 
-[node name="Cheese27" parent="." index="32" instance=ExtResource("2_p1ote")]
+[node name="Cheese27" parent="." index="33" instance=ExtResource("2_p1ote")]
 position = Vector2(33664, -128)
 
-[node name="Cheese28" parent="." index="33" instance=ExtResource("2_p1ote")]
+[node name="Cheese28" parent="." index="34" instance=ExtResource("2_p1ote")]
 position = Vector2(34944, -128)
 
-[node name="Cheese29" parent="." index="34" instance=ExtResource("2_p1ote")]
+[node name="Cheese29" parent="." index="35" instance=ExtResource("2_p1ote")]
 position = Vector2(36224, -128)
 
-[node name="Cheese30" parent="." index="35" instance=ExtResource("2_p1ote")]
+[node name="Cheese30" parent="." index="36" instance=ExtResource("2_p1ote")]
 position = Vector2(37504, -128)
 
-[node name="Cheese31" parent="." index="36" instance=ExtResource("2_p1ote")]
+[node name="Cheese31" parent="." index="37" instance=ExtResource("2_p1ote")]
 position = Vector2(38784, -128)
 
-[node name="Cheese32" parent="." index="37" instance=ExtResource("2_p1ote")]
+[node name="Cheese32" parent="." index="38" instance=ExtResource("2_p1ote")]
 position = Vector2(40064, -128)
 
-[node name="Cheese33" parent="." index="38" instance=ExtResource("2_p1ote")]
+[node name="Cheese33" parent="." index="39" instance=ExtResource("2_p1ote")]
 position = Vector2(41344, -128)
 
-[node name="Cheese34" parent="." index="39" instance=ExtResource("2_p1ote")]
+[node name="Cheese34" parent="." index="40" instance=ExtResource("2_p1ote")]
 position = Vector2(42624, -128)
 
-[node name="Cheese35" parent="." index="40" instance=ExtResource("2_p1ote")]
+[node name="Cheese35" parent="." index="41" instance=ExtResource("2_p1ote")]
 position = Vector2(43904, -128)
 
-[node name="Cheese36" parent="." index="41" instance=ExtResource("2_p1ote")]
+[node name="Cheese36" parent="." index="42" instance=ExtResource("2_p1ote")]
 position = Vector2(45184, -128)
 
-[node name="Cheese37" parent="." index="42" instance=ExtResource("2_p1ote")]
+[node name="Cheese37" parent="." index="43" instance=ExtResource("2_p1ote")]
 position = Vector2(46464, -128)
 
-[node name="Cheese38" parent="." index="43" instance=ExtResource("2_p1ote")]
+[node name="Cheese38" parent="." index="44" instance=ExtResource("2_p1ote")]
 position = Vector2(47744, -128)
 
-[node name="Cheese39" parent="." index="44" instance=ExtResource("2_p1ote")]
+[node name="Cheese39" parent="." index="45" instance=ExtResource("2_p1ote")]
 position = Vector2(49024, -128)
 
-[node name="Cheese40" parent="." index="45" instance=ExtResource("2_p1ote")]
+[node name="Cheese40" parent="." index="46" instance=ExtResource("2_p1ote")]
 position = Vector2(50304, -128)
 
-[node name="Cheese41" parent="." index="46" instance=ExtResource("2_p1ote")]
+[node name="Cheese41" parent="." index="47" instance=ExtResource("2_p1ote")]
 position = Vector2(51584, -128)
 
-[node name="Cheese42" parent="." index="47" instance=ExtResource("2_p1ote")]
+[node name="Cheese42" parent="." index="48" instance=ExtResource("2_p1ote")]
 position = Vector2(52864, -128)
 
-[node name="Cheese43" parent="." index="48" instance=ExtResource("2_p1ote")]
+[node name="Cheese43" parent="." index="49" instance=ExtResource("2_p1ote")]
 position = Vector2(54144, -128)
 
-[node name="Cheese44" parent="." index="49" instance=ExtResource("2_p1ote")]
+[node name="Cheese44" parent="." index="50" instance=ExtResource("2_p1ote")]
 position = Vector2(55424, -128)
 
-[node name="Cheese45" parent="." index="50" instance=ExtResource("2_p1ote")]
+[node name="Cheese45" parent="." index="51" instance=ExtResource("2_p1ote")]
 position = Vector2(56704, -128)
 
-[node name="Cheese46" parent="." index="51" instance=ExtResource("2_p1ote")]
+[node name="Cheese46" parent="." index="52" instance=ExtResource("2_p1ote")]
 position = Vector2(57984, -128)
 
-[node name="Cheese47" parent="." index="52" instance=ExtResource("2_p1ote")]
+[node name="Cheese47" parent="." index="53" instance=ExtResource("2_p1ote")]
 position = Vector2(59264, -128)
 
-[node name="Cheese48" parent="." index="53" instance=ExtResource("2_p1ote")]
+[node name="Cheese48" parent="." index="54" instance=ExtResource("2_p1ote")]
 position = Vector2(60544, -128)
-
-[node name="Cheese" parent="." index="54"]
-position = Vector2(128, -128)
 
 [node name="Goal" parent="." index="57"]
 position = Vector2(63360, -256)
