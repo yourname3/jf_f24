@@ -30,3 +30,9 @@ func _on_player_on_cheese_body_entered(body):
 	if state == State.Moving:
 		state = State.Stopped
 		body.cheese_jump()
+		
+func pickup() -> bool:
+	if state == State.Stopped:
+		state = State.Held
+		return true
+	return false

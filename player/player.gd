@@ -5,8 +5,21 @@ const SPEED = 256.0 * 6
 const JUMP_VELOCITY = -2000.0
 
 @onready var sprite = $Sprite
+@onready var item_pickup = $ItemPickup
+
+var current_held_item = null
+
+func update_item(delta):
+	if current_held_item != null:
+		current_held_item.global_position = global_position + Vector2(64, 0)
+	else:
+		var items = item_pickup.get_overlapping_bodies()
+		for item in items:
+			if item.pickup():
+				current_held_item = item
 
 func _physics_process(delta):
+	
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -27,6 +40,7 @@ func _physics_process(delta):
 		$Sprite.scale.x = sign(velocity.x)
 
 	move_and_slide()
+	update_item(delta)
 	
 func cheese_jump():
 	velocity.y = JUMP_VELOCITY

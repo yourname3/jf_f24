@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bh0t3hy5ivsas"]
+[gd_scene load_steps=6 format=3 uid="uid://bh0t3hy5ivsas"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_y7vb8"]
 [ext_resource type="Texture2D" uid="uid://cqyrdjlamlplm" path="res://player/player.png" id="2_hpc42"]
@@ -8,6 +8,9 @@ size = Vector2(256, 256)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cye7k"]
 size = Vector2(252, 252)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0uim2"]
+size = Vector2(256, 256)
 
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 4
@@ -25,5 +28,12 @@ collision_mask = 2
 
 [node name="HazardCollision" type="CollisionShape2D" parent="Hazard"]
 shape = SubResource("RectangleShape2D_cye7k")
+
+[node name="ItemPickup" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ItemPickup"]
+shape = SubResource("RectangleShape2D_0uim2")
 
 [connection signal="body_entered" from="Hazard" to="." method="_on_hazard_body_entered"]
