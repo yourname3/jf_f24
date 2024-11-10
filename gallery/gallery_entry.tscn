@@ -4,7 +4,7 @@
 [ext_resource type="Theme" uid="uid://dq1aqm2uflpau" path="res://main_theme.tres" id="1_va41p"]
 [ext_resource type="Script" path="res://gallery/gallery_entry.gd" id="3_vjtdh"]
 
-[node name="GalleryEntry" type="TextureRect"]
+[node name="GalleryEntry" type="TextureRect" groups=["GalleryEntry"]]
 z_index = 1
 offset_right = 240.0
 offset_bottom = 160.0
