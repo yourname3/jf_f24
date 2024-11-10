@@ -22,6 +22,8 @@ const ANIM_LENGTH = 0.3
 @onready var home_top: float = offset_top
 @onready var home_bottom: float = offset_bottom
 
+@export var level: PackedScene
+
 func do_anim(new_anim: Anim):
 	anim = new_anim
 	time = ANIM_LENGTH
@@ -38,7 +40,7 @@ func _on_examine_pressed():
 	%GalleryDisplay.fade_in(description)
 
 func _on_play_pressed():
-	pass # Replace with function body.
+	SceneTransition.change_to(level)
 
 func _on_back_pressed():
 	do_anim(Anim.MoveBack)
