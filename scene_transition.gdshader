@@ -21,11 +21,11 @@ void fragment() {
 	else if(SCREEN_PIXEL_SIZE.y < SCREEN_PIXEL_SIZE.x) {
 		scale.y = SCREEN_PIXEL_SIZE.x / SCREEN_PIXEL_SIZE.y;
 	}
-	
+
 	vec2 aa = fwidth(UV);
 	float aa_f = max(aa.x, aa.y);
 	aa_f = max(aa_f, 0.000001);
-	
+
 	float a = circle(vec2(0.6, 0.55), UV, scale, aa_f, 1.0 * all_scale);
 	a = max(a, circle(vec2(0.25, 0.35), UV, scale, aa_f, 0.55 * all_scale));
 	a = max(a, circle(vec2(0.85, 0.25), UV, scale, aa_f, 0.25 * all_scale));

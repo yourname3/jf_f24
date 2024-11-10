@@ -167,8 +167,5 @@ position = Vector2(59264, -128)
 [node name="Cheese48" parent="." index="54" instance=ExtResource("2_p1ote")]
 position = Vector2(60544, -128)
 
-[node name="ColorRect" parent="WinLayer" index="0"]
-color = Color(0.120138, 0.448812, 0.390953, 1)
-
 [node name="Goal" parent="." index="57"]
 position = Vector2(63360, -256)

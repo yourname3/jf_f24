@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://gmll0q18rrun"]
+
+[ext_resource type="Script" path="res://sounds.gd" id="1_ecqd1"]
+[ext_resource type="AudioStream" uid="uid://jp2et6vwubll" path="res://music/music-game.ogg" id="1_xhomy"]
+[ext_resource type="AudioStream" uid="uid://cr7b3oi5k6c2o" path="res://music/music-gallery.ogg" id="2_b0o85"]
+
+[node name="Sounds" type="Node"]
+script = ExtResource("1_ecqd1")
+
+[node name="MusicGame" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_xhomy")
+bus = &"Music"
+
+[node name="MusicGallery" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_b0o85")
+bus = &"Music"
