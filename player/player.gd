@@ -1,11 +1,16 @@
 extends CharacterBody2D
 
-const H_ACCEL = 1400.0
+const H_ACCEL = 256 * 16
 const SPEED = 256.0 * 6
 const JUMP_VELOCITY = -2000.0
 
 @onready var sprite = $Sprite
 @onready var item_pickup = $ItemPickup
+
+# Linear jump.
+var jump_timer = 0.0
+const JUMP_TIMER_MAX = 0.3
+const JUMP_MIN_LENGTH = 0.05
 
 var current_held_item = null
 
@@ -18,6 +23,7 @@ func update_item(delta):
 		current_held_item.global_position = global_position + Vector2(64, 0) * get_current_direction()
 		
 		if not Input.is_action_pressed("player_grab"):
+			current_held_item.global_position = global_position + Vector2(256 * 0.75, 0) * get_current_direction()
 			current_held_item.release(get_current_direction())
 			current_held_item = null
 	elif Input.is_action_pressed("player_grab"):
@@ -27,14 +33,24 @@ func update_item(delta):
 				current_held_item = item
 
 func _physics_process(delta):
-	
-	# Add the gravity.
-	if not is_on_floor():
+	# Jump is canceled as soon as we let go of the button.
+	# WE have a minimum jump length though.
+	if not Input.is_action_pressed("player_jump"):
+		if jump_timer <= JUMP_TIMER_MAX - JUMP_MIN_LENGTH:
+			jump_timer = 0.0
+	# While the jump timer is active, we have a linear jump.
+	if jump_timer > 0.0:
+		velocity.y = JUMP_VELOCITY
+		if jump_timer > JUMP_TIMER_MAX - JUMP_MIN_LENGTH:
+			velocity.y *= 1.2
+		jump_timer -= delta
+	# Otherwise, add the gravity.
+	elif not is_on_floor():
 		velocity += get_gravity() * delta
 
-	# Handle jump.
+	# Start the jump when the action is just pressed.
 	if Input.is_action_just_pressed("player_jump") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
+		jump()
 
 	# Horizontal acceleration
 	var direction = Input.get_axis("player_left", "player_right")
@@ -42,6 +58,8 @@ func _physics_process(delta):
 	var accel = H_ACCEL
 	if sign(velocity.x) != sign(target_speed):
 		accel *= 2
+	#elif abs(velocity.x) < (target_speed * 0.6):
+		#accel *= 4
 	velocity.x = move_toward(velocity.x, target_speed, accel * delta)
 	
 	if abs(velocity.x) > SPEED * 0.03:
@@ -50,8 +68,13 @@ func _physics_process(delta):
 	move_and_slide()
 	update_item(delta)
 	
+func jump():
+	jump_timer = JUMP_TIMER_MAX
+	# The initial jump should "jolt" up.
+	velocity.y = JUMP_VELOCITY * 1.2
+	
 func cheese_jump():
-	velocity.y = JUMP_VELOCITY
+	jump()
 
 func die():
 	#get_tree().change_scene_to_packed(get_tree().current_scene)
