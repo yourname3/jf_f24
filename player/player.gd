@@ -74,6 +74,9 @@ func _physics_process(delta):
 	for death_y_node in death_y:
 		if global_position.y > death_y_node.global_position.y:
 			die()
+			
+	if Input.is_action_just_pressed("player_restart"):
+		die()
 	
 	camera.go(delta)
 	

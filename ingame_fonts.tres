@@ -1,0 +1,12 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://d1rrd87h6tdmu"]
+
+[ext_resource type="FontFile" uid="uid://j2et4xgrtfi7" path="res://fonts/pompiere/Pompiere-Regular.ttf" id="1_q4tg7"]
+
+[sub_resource type="FontVariation" id="FontVariation_3qrax"]
+base_font = ExtResource("1_q4tg7")
+variation_embolden = 0.65
+
+[resource]
+default_font = ExtResource("1_q4tg7")
+default_font_size = 128
+RichTextLabel/fonts/bold_font = SubResource("FontVariation_3qrax")
