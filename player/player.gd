@@ -9,10 +9,18 @@ const JUMP_VELOCITY = -2000.0
 
 var current_held_item = null
 
+func get_current_direction():
+	# Unless we need to track it separately, this should work.
+	return sprite.scale.x
+
 func update_item(delta):
 	if current_held_item != null:
-		current_held_item.global_position = global_position + Vector2(64, 0)
-	else:
+		current_held_item.global_position = global_position + Vector2(64, 0) * get_current_direction()
+		
+		if not Input.is_action_pressed("player_grab"):
+			current_held_item.release(get_current_direction())
+			current_held_item = null
+	elif Input.is_action_pressed("player_grab"):
 		var items = item_pickup.get_overlapping_bodies()
 		for item in items:
 			if item.pickup():
@@ -37,7 +45,7 @@ func _physics_process(delta):
 	velocity.x = move_toward(velocity.x, target_speed, accel * delta)
 	
 	if abs(velocity.x) > SPEED * 0.03:
-		$Sprite.scale.x = sign(velocity.x)
+		sprite.scale.x = sign(velocity.x)
 
 	move_and_slide()
 	update_item(delta)
