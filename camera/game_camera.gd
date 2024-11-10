@@ -4,6 +4,9 @@ extends Camera2D
 
 # Should be called by the player script.
 func go(delta):
+	if player == null or get_viewport() == null:
+		return
+	
 	global_position = player.global_position
 	
 	var half_y = get_viewport().size.y * 0.5 / zoom.y

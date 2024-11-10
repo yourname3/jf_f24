@@ -5,6 +5,7 @@ const SPEED = 256.0 * 6
 const JUMP_VELOCITY = -2000.0
 
 @onready var camera = %Camera2D
+@onready var death_y = get_tree().get_nodes_in_group("DeathY")
 
 @onready var sprite = $Sprite
 @onready var item_pickup = $ItemPickup
@@ -69,6 +70,10 @@ func _physics_process(delta):
 
 	move_and_slide()
 	update_item(delta)
+	
+	for death_y_node in death_y:
+		if global_position.y > death_y_node.global_position.y:
+			die()
 	
 	camera.go(delta)
 	

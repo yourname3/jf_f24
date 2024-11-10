@@ -1,11 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://2umuaphrp4cm"]
+[gd_scene load_steps=14 format=3 uid="uid://2umuaphrp4cm"]
 
 [ext_resource type="PackedScene" uid="uid://bh0t3hy5ivsas" path="res://player/player.tscn" id="1_cowt7"]
 [ext_resource type="Script" path="res://camera/game_camera.gd" id="1_srbx4"]
 [ext_resource type="Texture2D" uid="uid://bgmcj6c8rga28" path="res://tiles/grass.png" id="2_d1xmb"]
 [ext_resource type="Texture2D" uid="uid://b4kl1rwx8bk6n" path="res://tiles/spike.png" id="3_5lhue"]
 [ext_resource type="PackedScene" uid="uid://cq867g6yqpo1x" path="res://cheese/cheese.tscn" id="4_wcusi"]
+[ext_resource type="Texture2D" uid="uid://crpcy3fj43142" path="res://tiles/invis_wall.png" id="5_8fnar"]
 [ext_resource type="PackedScene" uid="uid://d0wciam5ebgeq" path="res://pause_menu.tscn" id="5_gx7px"]
+[ext_resource type="Texture2D" uid="uid://dieb7irsaprdl" path="res://tiles/invis_wall_helper.png" id="6_p6koq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8782s"]
 texture = ExtResource("2_d1xmb")
@@ -19,6 +21,18 @@ texture_region_size = Vector2i(288, 288)
 0:0/0 = 0
 0:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(-128, -128, 128, -128, 128, 128, -128, 128)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tqjqr"]
+texture = ExtResource("5_8fnar")
+texture_region_size = Vector2i(256, 256)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-128, -128, 128, -128, 128, 128, -128, 128)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l67m4"]
+texture = ExtResource("6_p6koq")
+texture_region_size = Vector2i(256, 256)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-128, -128, 128, -128, 128, 128, -128, 128)
+
 [sub_resource type="TileSet" id="TileSet_no3vj"]
 tile_size = Vector2i(256, 256)
 physics_layer_0/collision_layer = 1
@@ -26,6 +40,8 @@ physics_layer_1/collision_layer = 2
 physics_layer_1/collision_mask = 2
 sources/0 = SubResource("TileSetAtlasSource_8782s")
 sources/1 = SubResource("TileSetAtlasSource_yqwfn")
+sources/2 = SubResource("TileSetAtlasSource_tqjqr")
+sources/3 = SubResource("TileSetAtlasSource_l67m4")
 
 [node name="Node2D" type="Node2D"]
 

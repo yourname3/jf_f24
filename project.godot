@@ -29,6 +29,7 @@ folder_colors={
 CameraLowestY=""
 CameraLeftmost=""
 CameraRightmost=""
+DeathY=""
 
 [input]
 
