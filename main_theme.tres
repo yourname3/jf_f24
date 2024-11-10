@@ -1,3 +1,7 @@
-[gd_resource type="Theme" format=3 uid="uid://dq1aqm2uflpau"]
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://dq1aqm2uflpau"]
+
+[ext_resource type="FontFile" uid="uid://j2et4xgrtfi7" path="res://fonts/pompiere/Pompiere-Regular.ttf" id="1_07fkl"]
 
 [resource]
+default_font = ExtResource("1_07fkl")
+default_font_size = 36

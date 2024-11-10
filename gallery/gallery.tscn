@@ -1,0 +1,67 @@
+[gd_scene load_steps=3 format=3 uid="uid://cblppf11p3pox"]
+
+[ext_resource type="Theme" uid="uid://dq1aqm2uflpau" path="res://main_theme.tres" id="1_lb248"]
+[ext_resource type="PackedScene" uid="uid://wjxwruhigke3" path="res://gallery/gallery_entry.tscn" id="2_qpxkv"]
+
+[node name="Gallery" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_lb248")
+color = Color(0.129331, 0.308338, 0.297984, 1)
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -164.5
+offset_top = 10.0
+offset_right = 164.5
+offset_bottom = 54.0
+grow_horizontal = 2
+text = "a rat's gallery of unloved levels"
+
+[node name="GalleryDisplay" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -441.0
+offset_right = 441.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0877077, 0.228686, 0.219516, 1)
+
+[node name="GalleryEntry" parent="." instance=ExtResource("2_qpxkv")]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -411.0
+offset_top = 66.0
+offset_right = -171.0
+offset_bottom = 226.0
+grow_horizontal = 2
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -135.0
+offset_top = 19.0
+offset_right = 417.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "this level is about the difficulty of being very consistent at a given task.
+
+with 40 identical cheese jumps in a row, it takes a 98% consistency at the trick to have even a 50% of beating the level on a given attempt.
+
+this level also emphasizes a lack of human intuition about counting. the first 10 jumps feels like more than 10."
+autowrap_mode = 3

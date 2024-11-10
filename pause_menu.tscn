@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://d0wciam5ebgeq"]
+[gd_scene load_steps=3 format=3 uid="uid://d0wciam5ebgeq"]
 
+[ext_resource type="Script" path="res://pause_menu.gd" id="1_olq6u"]
 [ext_resource type="Theme" uid="uid://dq1aqm2uflpau" path="res://main_theme.tres" id="1_qd4gm"]
 
 [node name="PauseMenu" type="CanvasLayer"]
+script = ExtResource("1_olq6u")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 15
@@ -14,25 +16,46 @@ theme = ExtResource("1_qd4gm")
 color = Color(0, 0.483815, 0.382077, 1)
 
 [node name="Label" type="Label" parent="ColorRect"]
-layout_mode = 0
-offset_left = 527.0
-offset_top = 40.0
-offset_right = 584.0
-offset_bottom = 63.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -38.5
+offset_top = 48.0
+offset_right = 38.5
+offset_bottom = 92.0
+grow_horizontal = 2
 text = "Paused"
 
 [node name="Restart" type="Button" parent="ColorRect"]
-layout_mode = 0
-offset_left = 482.0
-offset_top = 236.0
-offset_right = 606.0
-offset_bottom = 267.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -62.0
+offset_top = -59.0
+offset_right = 62.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
 text = "Restart"
 
 [node name="Quit" type="Button" parent="ColorRect"]
-layout_mode = 0
-offset_left = 483.0
-offset_top = 273.0
-offset_right = 607.0
-offset_bottom = 304.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -86.0
+offset_top = 5.0
+offset_right = 86.0
+offset_bottom = 57.0
+grow_horizontal = 2
+grow_vertical = 2
 text = "Back to Gallery"
+
+[connection signal="pressed" from="ColorRect/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="ColorRect/Quit" to="." method="_on_quit_pressed"]

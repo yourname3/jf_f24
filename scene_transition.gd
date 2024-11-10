@@ -9,6 +9,8 @@ func change_to(scene: PackedScene):
 	target_scene = scene
 	$AnimationPlayer.play("fadeout")
 	
+	get_tree().paused = false
+	
 func _anim_change_scene():
 	assert(target_scene != null)
 	get_tree().change_scene_to_packed(target_scene)

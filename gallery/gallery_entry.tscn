@@ -1,0 +1,82 @@
+[gd_scene load_steps=3 format=3 uid="uid://wjxwruhigke3"]
+
+[ext_resource type="Texture2D" uid="uid://bwvlnssn5ft2h" path="res://gallery/consistency.png" id="1_thtit"]
+[ext_resource type="Theme" uid="uid://dq1aqm2uflpau" path="res://main_theme.tres" id="1_va41p"]
+
+[node name="GalleryEntry" type="TextureRect"]
+z_index = 1
+offset_right = 240.0
+offset_bottom = 160.0
+theme = ExtResource("1_va41p")
+texture = ExtResource("1_thtit")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+layout_mode = 0
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 244.0
+offset_bottom = 164.0
+color = Color(0, 0, 0, 1)
+
+[node name="Examine" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -66.5
+offset_top = 10.0
+offset_right = 66.5
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "examine"
+
+[node name="Play" type="Button" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -66.5
+offset_top = 10.0
+offset_right = 66.5
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "play!"
+
+[node name="Back" type="Button" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -66.5
+offset_top = 68.0
+offset_right = 66.5
+offset_bottom = 120.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "back"
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -119.0
+offset_top = -51.0
+offset_right = 119.0
+offset_bottom = -7.0
+grow_horizontal = 2
+text = "\"consistency\""
+horizontal_alignment = 1
