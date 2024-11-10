@@ -86,8 +86,9 @@ func cheese_jump():
 	jump()
 
 func die():
-	#get_tree().change_scene_to_packed(get_tree().current_scene)
-	get_tree().reload_current_scene()
+	# TODO: Make this more efficient.
+	var scene = load(get_tree().current_scene.scene_file_path)
+	SceneTransition.change_to(scene)
 
 func _on_hazard_body_entered(body):
 	# Player dies.
