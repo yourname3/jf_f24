@@ -58,11 +58,11 @@ offset_right = 417.0
 offset_bottom = -2.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "most games would have reasonable spike hitboxes so that the jumps in this level would be easy. one game, however, does not: Super Mario Maker 2. and this level follows in its footsteps.
+text = "this level is unfair. with the information about how to beat it, it is trivial; but learning that information can only be done through trial and error.
 
-the bizarre jumps here are disliked by many, but loved by a small number of people, who make levels specifically centered on this concept.
+such a level is almost completely unplayable in this form. there is nothing interesting about learning the missing information.
 
-the flavour of the jumps here is unlike anything else. not entirely random, but they sure feel random, and they're impossible to reach particularly high consistency on."
+however, if the missing information is packaged in novel and surprising ways, such levels can be quite enjoyable. such experiences can be found in \"troll\" levels or games (e.g. Cat Mario)."
 autowrap_mode = 3
 
 [node name="Consistency" parent="." instance=ExtResource("2_qpxkv")]
@@ -134,11 +134,11 @@ offset_bottom = 583.0
 grow_horizontal = 2
 texture = ExtResource("9_7m0lu")
 title = "unfair"
-description = "most games would have reasonable spike hitboxes so that the jumps in this level would be easy. one game, however, does not: Super Mario Maker 2. and this level follows in its footsteps.
+description = "this level is unfair. with the information about how to beat it, it is trivial; but learning that information can only be done through trial and error.
 
-the bizarre jumps here are disliked by many, but loved by a small number of people, who make levels specifically centered on this concept.
+such a level is almost completely unplayable in this form. there is nothing interesting about learning the missing information.
 
-the flavour of the jumps here is unlike anything else. not entirely random, but they sure feel random, and they're impossible to reach particularly high consistency on."
+however, if the missing information is packaged in novel and surprising ways, such levels can be quite enjoyable. such experiences can be found in \"troll\" levels or games (e.g. Cat Mario)."
 level = ExtResource("10_m6lxw")
 
 [node name="GalleryTargetPos" type="ColorRect" parent="."]
