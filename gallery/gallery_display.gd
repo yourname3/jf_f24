@@ -18,6 +18,10 @@ func fade_in(text: String):
 	time = ANIM_LENGTH
 	description.text = text
 
+func fade_out():
+	anim = Anim.FadeOut
+	time = ANIM_LENGTH
+
 func _process(delta):
 	if time > 0.0:
 		time -= delta

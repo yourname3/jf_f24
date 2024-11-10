@@ -26,6 +26,8 @@ func do_anim(new_anim: Anim):
 func _on_examine_pressed():
 	do_anim(Anim.MoveToExamine)
 	
+	$Examine.hide()
+	
 	for node in get_tree().get_nodes_in_group("GalleryEntry"):
 		if node != self:
 			node.do_anim(Anim.FadeOut)
@@ -36,7 +38,16 @@ func _on_play_pressed():
 	pass # Replace with function body.
 
 func _on_back_pressed():
-	pass # Replace with function body.
+	do_anim(Anim.MoveBack)
+	
+	$Play.hide()
+	$Back.hide()
+	
+	for node in get_tree().get_nodes_in_group("GalleryEntry"):
+		if node != self:
+			node.do_anim(Anim.FadeIn)
+
+	%GalleryDisplay.fade_out()
 
 func _process(delta):
 	if time > 0.0:
@@ -49,12 +60,25 @@ func _process(delta):
 				pass
 			Anim.MoveToExamine:
 				position = current_position.lerp(gallery_target.position, t)
+			Anim.MoveBack:
+				position = gallery_target.position.lerp(current_position, t)
 			Anim.FadeOut:
 				modulate.a = 1.0 - t
 				if modulate.a < 0.03:
 					hide()
+			Anim.FadeIn:
+				modulate.a = t
+				if modulate.a > 0.03:
+					show()
 			_:
 				pass
 				
 		if time <= 0.0:
+			# At the end of this anim, show the buttons.
+			if anim == Anim.MoveToExamine:
+				$Play.show()
+				$Back.show()
+			if anim == Anim.MoveBack:
+				$Examine.show()
+
 			anim = Anim.None
