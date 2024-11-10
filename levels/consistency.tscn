@@ -167,5 +167,5 @@ position = Vector2(60544, -128)
 [node name="Cheese" parent="." index="54"]
 position = Vector2(128, -128)
 
-[node name="PauseMenu" parent="." index="55"]
-visible = false
+[node name="Goal" parent="." index="57"]
+position = Vector2(63360, -256)

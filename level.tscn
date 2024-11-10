@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://2umuaphrp4cm"]
+[gd_scene load_steps=17 format=3 uid="uid://2umuaphrp4cm"]
 
 [ext_resource type="PackedScene" uid="uid://bh0t3hy5ivsas" path="res://player/player.tscn" id="1_cowt7"]
 [ext_resource type="Script" path="res://camera/game_camera.gd" id="1_srbx4"]
@@ -8,6 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://crpcy3fj43142" path="res://tiles/invis_wall.png" id="5_8fnar"]
 [ext_resource type="PackedScene" uid="uid://d0wciam5ebgeq" path="res://pause_menu.tscn" id="5_gx7px"]
 [ext_resource type="Texture2D" uid="uid://dieb7irsaprdl" path="res://tiles/invis_wall_helper.png" id="6_p6koq"]
+[ext_resource type="Script" path="res://goal/win_layer.gd" id="8_mpbl5"]
+[ext_resource type="Theme" uid="uid://dq1aqm2uflpau" path="res://main_theme.tres" id="8_scp2t"]
+[ext_resource type="PackedScene" uid="uid://dm5y8pfcs7mw0" path="res://goal/goal.tscn" id="9_j4k4x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8782s"]
 texture = ExtResource("2_d1xmb")
@@ -63,4 +66,56 @@ layer_0/tile_data = PackedInt32Array(65533, 0, 0, 65534, 0, 0, 65535, 0, 0, 0, 0
 [node name="Cheese" parent="." instance=ExtResource("4_wcusi")]
 position = Vector2(2438, -144)
 
+[node name="WinLayer" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+script = ExtResource("8_mpbl5")
+
+[node name="ColorRect" type="ColorRect" parent="WinLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -248.0
+offset_top = 11.0
+offset_right = 248.0
+offset_bottom = 75.0
+grow_horizontal = 2
+theme = ExtResource("8_scp2t")
+color = Color(0.120138, 0.448812, 0.390953, 1)
+
+[node name="Label" type="Label" parent="WinLayer/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.5
+offset_top = -22.0
+offset_right = 43.5
+offset_bottom = 22.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Victory!"
+
+[node name="Back" type="Button" parent="WinLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -103.0
+offset_top = -35.0
+offset_right = 103.0
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("8_scp2t")
+text = "Back to Gallery"
+
 [node name="PauseMenu" parent="." instance=ExtResource("5_gx7px")]
+layer = 2
+visible = false
+
+[node name="Goal" parent="." instance=ExtResource("9_j4k4x")]
+
+[connection signal="pressed" from="WinLayer/Back" to="WinLayer" method="_on_back_pressed"]

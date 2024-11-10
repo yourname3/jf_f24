@@ -18,4 +18,4 @@ func _on_restart_pressed():
 		player.die()
 
 func _on_quit_pressed():
-	pass # Replace with function body.
+	SceneTransition.change_to(Globals.Gallery)
