@@ -4,10 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://cqyrdjlamlplm" path="res://player/player.png" id="2_hpc42"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_40l7b"]
-size = Vector2(256, 256)
+size = Vector2(256, 252)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cye7k"]
-size = Vector2(252, 252)
+size = Vector2(252, 248)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0uim2"]
 size = Vector2(256, 256)
@@ -20,6 +20,7 @@ script = ExtResource("1_y7vb8")
 texture = ExtResource("2_hpc42")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_40l7b")
 
 [node name="Hazard" type="Area2D" parent="."]
@@ -27,6 +28,7 @@ collision_layer = 0
 collision_mask = 2
 
 [node name="HazardCollision" type="CollisionShape2D" parent="Hazard"]
+position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_cye7k")
 
 [node name="ItemPickup" type="Area2D" parent="."]
