@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://gmll0q18rrun"]
+[gd_scene load_steps=10 format=3 uid="uid://gmll0q18rrun"]
 
 [ext_resource type="Script" path="res://sounds.gd" id="1_ecqd1"]
 [ext_resource type="AudioStream" uid="uid://jp2et6vwubll" path="res://music/music-game.ogg" id="1_xhomy"]
@@ -7,6 +7,8 @@
 [ext_resource type="AudioStream" uid="uid://dbebg77h8wl1i" path="res://sounds/grab.wav" id="5_1fj5y"]
 [ext_resource type="AudioStream" uid="uid://c746mdo6axj" path="res://sounds/jump_cheese.wav" id="5_cct5g"]
 [ext_resource type="AudioStream" uid="uid://d4ddeb15xo8sx" path="res://sounds/release.wav" id="6_ddqg6"]
+[ext_resource type="AudioStream" uid="uid://bw4nfmm28r036" path="res://sounds/ow.wav" id="8_lposj"]
+[ext_resource type="AudioStream" uid="uid://syln8j23okdd" path="res://sounds/hooray.ogg" id="9_annaa"]
 
 [node name="Sounds" type="Node"]
 process_mode = 3
@@ -37,5 +39,16 @@ bus = &"SFX"
 
 [node name="Release" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_ddqg6")
+max_polyphony = 8
+bus = &"SFX"
+
+[node name="Ow" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_lposj")
+max_polyphony = 8
+bus = &"SFX"
+
+[node name="Hooray" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_annaa")
+volume_db = -14.0
 max_polyphony = 8
 bus = &"SFX"

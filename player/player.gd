@@ -94,6 +94,7 @@ func cheese_jump():
 
 func die():
 	# TODO: Make this more efficient.
+	Sounds.ow.play()
 	var scene = load(get_tree().current_scene.scene_file_path)
 	SceneTransition.change_to(scene)
 

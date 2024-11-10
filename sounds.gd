@@ -8,6 +8,9 @@ extends Node
 @onready var grab = $Grab
 @onready var release = $Release
 
+@onready var ow = $Ow
+@onready var hooray = $Hooray
+
 # Current energy which steps towards goal energy. Represents the energy of
 # music_game.
 var current_energy = 0.0
