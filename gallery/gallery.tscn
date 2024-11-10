@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cblppf11p3pox"]
+[gd_scene load_steps=11 format=3 uid="uid://cblppf11p3pox"]
 
 [ext_resource type="Theme" uid="uid://dq1aqm2uflpau" path="res://main_theme.tres" id="1_lb248"]
 [ext_resource type="PackedScene" uid="uid://wjxwruhigke3" path="res://gallery/gallery_entry.tscn" id="2_qpxkv"]
@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://brbbtepfag7rh" path="res://levels/tedium.tscn" id="6_8dpgp"]
 [ext_resource type="Texture2D" uid="uid://buutjs811gh87" path="res://gallery/ludicrous.png" id="7_wvqxj"]
 [ext_resource type="PackedScene" uid="uid://1m1xk6w38p1r" path="res://levels/ludicrous.tscn" id="8_q2gpa"]
+[ext_resource type="Texture2D" uid="uid://dsu232d65ugul" path="res://gallery/unfair.png" id="9_7m0lu"]
+[ext_resource type="PackedScene" uid="uid://4u76nef0w6vx" path="res://levels/unfair.tscn" id="10_m6lxw"]
 
 [node name="Gallery" type="ColorRect"]
 anchors_preset = 15
@@ -119,6 +121,25 @@ the bizarre jumps here are disliked by many, but loved by a small number of peop
 
 the flavour of the jumps here is unlike anything else. not entirely random, but they sure feel random, and they're impossible to reach particularly high consistency on."
 level = ExtResource("8_q2gpa")
+
+[node name="Unfair" parent="." instance=ExtResource("2_qpxkv")]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 32.0
+offset_top = 423.0
+offset_right = 272.0
+offset_bottom = 583.0
+grow_horizontal = 2
+texture = ExtResource("9_7m0lu")
+title = "unfair"
+description = "most games would have reasonable spike hitboxes so that the jumps in this level would be easy. one game, however, does not: Super Mario Maker 2. and this level follows in its footsteps.
+
+the bizarre jumps here are disliked by many, but loved by a small number of people, who make levels specifically centered on this concept.
+
+the flavour of the jumps here is unlike anything else. not entirely random, but they sure feel random, and they're impossible to reach particularly high consistency on."
+level = ExtResource("10_m6lxw")
 
 [node name="GalleryTargetPos" type="ColorRect" parent="."]
 unique_name_in_owner = true
