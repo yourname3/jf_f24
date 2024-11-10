@@ -25,6 +25,7 @@ grow_horizontal = 2
 text = "a rat's gallery of unloved levels"
 
 [node name="GalleryDisplay" type="ColorRect" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 13
 anchor_left = 0.5
@@ -41,13 +42,14 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -411.0
-offset_top = 66.0
-offset_right = -171.0
-offset_bottom = 226.0
+offset_left = -317.0
+offset_top = 144.0
+offset_right = -77.0
+offset_bottom = 304.0
 grow_horizontal = 2
 
-[node name="Label2" type="Label" parent="."]
+[node name="Description" type="Label" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 13
 anchor_left = 0.5
@@ -65,3 +67,15 @@ with 40 identical cheese jumps in a row, it takes a 98% consistency at the trick
 
 this level also emphasizes a lack of human intuition about counting. the first 10 jumps feels like more than 10."
 autowrap_mode = 3
+
+[node name="GalleryTargetPos" type="ColorRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -411.0
+offset_top = 66.0
+offset_right = -371.0
+offset_bottom = 106.0
+grow_horizontal = 2

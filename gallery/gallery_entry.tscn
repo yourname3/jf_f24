@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://wjxwruhigke3"]
+[gd_scene load_steps=4 format=3 uid="uid://wjxwruhigke3"]
 
 [ext_resource type="Texture2D" uid="uid://bwvlnssn5ft2h" path="res://gallery/consistency.png" id="1_thtit"]
 [ext_resource type="Theme" uid="uid://dq1aqm2uflpau" path="res://main_theme.tres" id="1_va41p"]
+[ext_resource type="Script" path="res://gallery/gallery_entry.gd" id="3_vjtdh"]
 
 [node name="GalleryEntry" type="TextureRect"]
 z_index = 1
@@ -11,6 +12,12 @@ theme = ExtResource("1_va41p")
 texture = ExtResource("1_thtit")
 expand_mode = 1
 stretch_mode = 6
+script = ExtResource("3_vjtdh")
+description = "this level is about the difficulty of being very consistent at a given task.
+
+with 40 identical cheese jumps in a row, it takes a 98% consistency at the trick to have even a 50% of beating the level on a given attempt.
+
+this level also emphasizes a lack of human intuition about counting. the first 10 jumps feels like more than 10."
 
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = -1
@@ -80,3 +87,7 @@ offset_bottom = -7.0
 grow_horizontal = 2
 text = "\"consistency\""
 horizontal_alignment = 1
+
+[connection signal="pressed" from="Examine" to="." method="_on_examine_pressed"]
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
