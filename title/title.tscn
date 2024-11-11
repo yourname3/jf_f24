@@ -1,0 +1,70 @@
+[gd_scene load_steps=4 format=3 uid="uid://dee4csa1nfxbi"]
+
+[ext_resource type="Theme" uid="uid://dq1aqm2uflpau" path="res://main_theme.tres" id="1_7bboh"]
+[ext_resource type="Script" path="res://title/title.gd" id="2_qg2vg"]
+[ext_resource type="Script" path="res://button_with_sounds.gd" id="3_n8g50"]
+
+[node name="Title" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_7bboh")
+color = Color(0.129331, 0.308338, 0.297984, 1)
+script = ExtResource("2_qg2vg")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -164.5
+offset_top = -192.0
+offset_right = 164.5
+offset_bottom = -148.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "a rat's gallery of unloved levels"
+
+[node name="Credits" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -541.0
+offset_top = 29.0
+offset_right = 554.0
+offset_bottom = 308.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 36
+text = "a game by ben
+
+thanks to sorkin type co. for the pompiere font (licensed under OFL).
+
+thanks to freesound users lesaucisson, wyronroberth, falcospizaetus, xcallono, vesperia94, tramppa34, and connersaw64 for their cc0 sound effects."
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Play" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -65.0
+offset_top = -136.0
+offset_right = 65.0
+offset_bottom = -84.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "play!"
+script = ExtResource("3_n8g50")
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
