@@ -99,3 +99,6 @@ player_restart={
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
 environment/defaults/default_clear_color=Color(0.289422, 0.463006, 0.749955, 1)
+environment/main_scene="res://title/title.tscn"
+environment/show_image=false
+environment/name="a rat's gallery of unloved levels"
