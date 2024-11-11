@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://2umuaphrp4cm"]
+[gd_scene load_steps=28 format=3 uid="uid://2umuaphrp4cm"]
 
 [ext_resource type="PackedScene" uid="uid://bh0t3hy5ivsas" path="res://player/player.tscn" id="1_cowt7"]
 [ext_resource type="Script" path="res://camera/game_camera.gd" id="1_srbx4"]
@@ -7,10 +7,14 @@
 [ext_resource type="Texture2D" uid="uid://crpcy3fj43142" path="res://tiles/invis_wall.png" id="5_8fnar"]
 [ext_resource type="PackedScene" uid="uid://d0wciam5ebgeq" path="res://pause_menu.tscn" id="5_gx7px"]
 [ext_resource type="Texture2D" uid="uid://dieb7irsaprdl" path="res://tiles/invis_wall_helper.png" id="6_p6koq"]
+[ext_resource type="Texture2D" uid="uid://ug3qnpquq7r6" path="res://polish/grass1.png" id="7_c5pua"]
+[ext_resource type="Texture2D" uid="uid://dyjb6s48sjuk8" path="res://polish/grass2.png" id="8_jdpbl"]
 [ext_resource type="Script" path="res://goal/win_layer.gd" id="8_mpbl5"]
 [ext_resource type="Theme" uid="uid://dq1aqm2uflpau" path="res://main_theme.tres" id="8_scp2t"]
 [ext_resource type="Script" path="res://button_with_sounds.gd" id="9_h4rwt"]
 [ext_resource type="PackedScene" uid="uid://dm5y8pfcs7mw0" path="res://goal/goal.tscn" id="9_j4k4x"]
+[ext_resource type="Texture2D" uid="uid://cs2mrd10ned1d" path="res://polish/grass3.png" id="9_qcb0e"]
+[ext_resource type="Script" path="res://level_tile_map.gd" id="10_8tq04"]
 [ext_resource type="Texture2D" uid="uid://cja28madug5oa" path="res://parallax/back.png" id="12_fsrl8"]
 [ext_resource type="Texture2D" uid="uid://bysy1p8bsxe2w" path="res://parallax/middle.png" id="13_38unq"]
 [ext_resource type="Texture2D" uid="uid://g46itrayh8jx" path="res://parallax/front.png" id="14_26tcl"]
@@ -41,6 +45,24 @@ texture_region_size = Vector2i(256, 256)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-128, -128, 128, -128, 128, 128, -128, 128)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4cw54"]
+texture = ExtResource("7_c5pua")
+texture_region_size = Vector2i(256, 256)
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(0, -120)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cl2td"]
+texture = ExtResource("8_jdpbl")
+texture_region_size = Vector2i(256, 256)
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(0, -120)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_koanu"]
+texture = ExtResource("9_qcb0e")
+texture_region_size = Vector2i(256, 256)
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(0, -120)
+
 [sub_resource type="TileSet" id="TileSet_no3vj"]
 tile_size = Vector2i(256, 256)
 physics_layer_0/collision_layer = 1
@@ -50,6 +72,9 @@ sources/0 = SubResource("TileSetAtlasSource_8782s")
 sources/1 = SubResource("TileSetAtlasSource_yqwfn")
 sources/2 = SubResource("TileSetAtlasSource_tqjqr")
 sources/3 = SubResource("TileSetAtlasSource_l67m4")
+sources/4 = SubResource("TileSetAtlasSource_4cw54")
+sources/5 = SubResource("TileSetAtlasSource_cl2td")
+sources/6 = SubResource("TileSetAtlasSource_koanu")
 
 [node name="Node2D" type="Node2D" groups=["Level"]]
 
@@ -66,7 +91,8 @@ position = Vector2(3216, -923)
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_no3vj")
 format = 2
-layer_0/tile_data = PackedInt32Array(65533, 0, 0, 65534, 0, 0, 65535, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 65532, 0, 0, 65531, 0, 0, 65530, 0, 0, 65529, 0, 0, -65530, 0, 0, -131066, 0, 0, -196602, 0, 0, -262138, 0, 0, 65522, 0, 0, 65521, 0, 0, 65520, 0, 0, 65519, 0, 0, 65518, 0, 0, 65517, 0, 0, -196604, 1, 0, -196605, 1, 0, -196606, 1, 0, -65541, 1, 0, -65539, 1, 0, -65542, 0, 0, -65543, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 16, 0, 0, 17, 0, 0, 18, 0, 0, 19, 0, 0, -65517, 0, 0, -131053, 0, 0, -196589, 0, 0, -327674, 0, 0, -393210, 1, 0, 65542, 1, 0, 65543, 1, 0, 65544, 1, 0, 65545, 1, 0, 65546, 1, 0, 65547, 1, 0, 65548, 1, 0, 65549, 1, 0, 65550, 1, 0)
+layer_0/tile_data = PackedInt32Array(65533, 0, 0, 65534, 0, 0, 65535, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 65532, 0, 0, 65531, 0, 0, 65530, 0, 0, 65529, 0, 0, -65530, 0, 0, -131066, 0, 0, -196602, 0, 0, -262138, 0, 0, 65522, 0, 0, 65521, 0, 0, 65520, 0, 0, 65519, 0, 0, 65518, 0, 0, 65517, 0, 0, -196604, 1, 0, -196605, 1, 0, -196606, 1, 0, -65541, 1, 0, -65539, 1, 0, -65542, 0, 0, -65543, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 16, 0, 0, 17, 0, 0, 18, 0, 0, 19, 0, 0, -65517, 0, 0, -131053, 0, 0, -196589, 0, 0, -327674, 0, 0, -393210, 1, 0, 65542, 1, 0, 65543, 1, 0, 65544, 1, 0, 65545, 1, 0, 65546, 1, 0, 65547, 1, 0, 65548, 1, 0, 65549, 1, 0, 65550, 1, 0, -262125, 4, 0, -65521, 4, 0, -65520, 4, 0, -65519, 4, 0, -65518, 4, 0, -65522, 5, 0, -65523, 6, 0, -65527, 4, 0, -65526, 4, 0, -65525, 4, 0, -65524, 4, 0)
+script = ExtResource("10_8tq04")
 
 [node name="WinLayer" type="CanvasLayer" parent="."]
 unique_name_in_owner = true
@@ -116,7 +142,7 @@ text = "Back to Gallery"
 script = ExtResource("9_h4rwt")
 
 [node name="PauseMenu" parent="." instance=ExtResource("5_gx7px")]
-layer = 2
+layer = 3
 visible = false
 
 [node name="Goal" parent="." instance=ExtResource("9_j4k4x")]
