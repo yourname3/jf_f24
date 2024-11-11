@@ -13,6 +13,7 @@ size = Vector2(254, 248)
 size = Vector2(256, 256)
 
 [node name="Player" type="CharacterBody2D"]
+z_index = -2
 collision_layer = 4
 script = ExtResource("1_y7vb8")
 
