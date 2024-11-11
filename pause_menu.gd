@@ -19,3 +19,6 @@ func _on_restart_pressed():
 
 func _on_quit_pressed():
 	SceneTransition.change_to(Globals.Gallery)
+
+func _on_main_menu_pressed():
+	SceneTransition.change_to(Globals.MainMenu)
