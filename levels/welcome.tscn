@@ -124,3 +124,6 @@ position = Vector2(24832, -1024)
 
 [node name="DeathY" type="Marker2D" parent="." index="18" groups=["DeathY"]]
 position = Vector2(256, 768)
+
+[node name="Sprite2D" parent="Parallax2D/ParallaxLayer4" index="0"]
+offset = Vector2(0, -512)
