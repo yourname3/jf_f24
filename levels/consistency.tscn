@@ -169,3 +169,6 @@ position = Vector2(60544, -128)
 
 [node name="Goal" parent="." index="57"]
 position = Vector2(63360, -256)
+
+[node name="ParallaxLayer" parent="Parallax2D" index="0"]
+motion_mirroring = Vector2(6144, 0)

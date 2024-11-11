@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://2umuaphrp4cm"]
+[gd_scene load_steps=20 format=3 uid="uid://2umuaphrp4cm"]
 
 [ext_resource type="PackedScene" uid="uid://bh0t3hy5ivsas" path="res://player/player.tscn" id="1_cowt7"]
 [ext_resource type="Script" path="res://camera/game_camera.gd" id="1_srbx4"]
@@ -11,6 +11,9 @@
 [ext_resource type="Theme" uid="uid://dq1aqm2uflpau" path="res://main_theme.tres" id="8_scp2t"]
 [ext_resource type="Script" path="res://button_with_sounds.gd" id="9_h4rwt"]
 [ext_resource type="PackedScene" uid="uid://dm5y8pfcs7mw0" path="res://goal/goal.tscn" id="9_j4k4x"]
+[ext_resource type="Texture2D" uid="uid://cja28madug5oa" path="res://parallax/back.png" id="12_fsrl8"]
+[ext_resource type="Texture2D" uid="uid://bysy1p8bsxe2w" path="res://parallax/middle.png" id="13_38unq"]
+[ext_resource type="Texture2D" uid="uid://g46itrayh8jx" path="res://parallax/front.png" id="14_26tcl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8782s"]
 texture = ExtResource("2_d1xmb")
@@ -116,5 +119,34 @@ layer = 2
 visible = false
 
 [node name="Goal" parent="." instance=ExtResource("9_j4k4x")]
+
+[node name="Parallax2D" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Parallax2D"]
+motion_scale = Vector2(0.075, 0.01)
+motion_mirroring = Vector2(6144, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D/ParallaxLayer"]
+scale = Vector2(3, 3)
+texture = ExtResource("12_fsrl8")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="Parallax2D"]
+motion_scale = Vector2(0.15, 0.02)
+motion_mirroring = Vector2(6144, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D/ParallaxLayer2"]
+scale = Vector2(3, 3)
+texture = ExtResource("13_38unq")
+centered = false
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="Parallax2D"]
+motion_scale = Vector2(0.225, 0.03)
+motion_mirroring = Vector2(6144, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D/ParallaxLayer3"]
+scale = Vector2(3, 3)
+texture = ExtResource("14_26tcl")
+centered = false
 
 [connection signal="pressed" from="WinLayer/Back" to="WinLayer" method="_on_back_pressed"]
