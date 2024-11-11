@@ -14,6 +14,8 @@ extends Node
 @onready var hover_on = $HoverOn
 @onready var hover_off = $HoverOff
 
+@onready var swoosh = $Swoosh
+
 # Current energy which steps towards goal energy. Represents the energy of
 # music_game.
 var current_energy = 0.0
