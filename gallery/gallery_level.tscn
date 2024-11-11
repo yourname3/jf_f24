@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://2umuaphrp4cm" path="res://level.tscn" id="1_ikxax"]
 [ext_resource type="PackedScene" uid="uid://cblppf11p3pox" path="res://gallery/gallery.tscn" id="2_pf183"]
 
-[node name="Node2D" instance=ExtResource("1_ikxax")]
+[node name="Node2D" groups=["Gallery"] instance=ExtResource("1_ikxax")]
 
 [node name="Camera2D" parent="." index="0"]
 position = Vector2(2496, -1364)

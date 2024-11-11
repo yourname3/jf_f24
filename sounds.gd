@@ -30,6 +30,10 @@ func _process(delta):
 	if get_tree().get_node_count_in_group("Level") > 0:
 		goal_energy = 1.0
 		
+	# If we're in the gallery level, it'sd still 0.0.
+	if get_tree().get_node_count_in_group("Gallery") > 0:
+		goal_energy = 0.0
+		
 	current_energy += (goal_energy - current_energy) * 0.05
 	
 	music_game.volume_db = linear_to_db(current_energy)
