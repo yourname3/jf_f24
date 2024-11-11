@@ -17,6 +17,8 @@ const JUMP_MIN_LENGTH = 0.05
 
 var current_held_item = null
 
+var dead = false
+
 func get_current_direction():
 	# Unless we need to track it separately, this should work.
 	return sprite.scale.x
@@ -94,7 +96,9 @@ func cheese_jump():
 
 func die():
 	# TODO: Make this more efficient.
-	Sounds.ow.play()
+	if not dead:
+		Sounds.ow.play()
+		dead = true
 	var scene = load(get_tree().current_scene.scene_file_path)
 	SceneTransition.change_to(scene)
 
