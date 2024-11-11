@@ -22,7 +22,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_lb248")
-color = Color(0.129331, 0.308338, 0.297984, 1)
+color = Color(0.129412, 0.309804, 0.298039, 0)
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 1
