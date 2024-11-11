@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://2umuaphrp4cm"]
+[gd_scene load_steps=17 format=3 uid="uid://2umuaphrp4cm"]
 
 [ext_resource type="PackedScene" uid="uid://bh0t3hy5ivsas" path="res://player/player.tscn" id="1_cowt7"]
 [ext_resource type="Script" path="res://camera/game_camera.gd" id="1_srbx4"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dieb7irsaprdl" path="res://tiles/invis_wall_helper.png" id="6_p6koq"]
 [ext_resource type="Script" path="res://goal/win_layer.gd" id="8_mpbl5"]
 [ext_resource type="Theme" uid="uid://dq1aqm2uflpau" path="res://main_theme.tres" id="8_scp2t"]
+[ext_resource type="Script" path="res://button_with_sounds.gd" id="9_h4rwt"]
 [ext_resource type="PackedScene" uid="uid://dm5y8pfcs7mw0" path="res://goal/goal.tscn" id="9_j4k4x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8782s"]
@@ -108,6 +109,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("8_scp2t")
 text = "Back to Gallery"
+script = ExtResource("9_h4rwt")
 
 [node name="PauseMenu" parent="." instance=ExtResource("5_gx7px")]
 layer = 2

@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://wjxwruhigke3"]
+[gd_scene load_steps=5 format=3 uid="uid://wjxwruhigke3"]
 
 [ext_resource type="Texture2D" uid="uid://bwvlnssn5ft2h" path="res://gallery/consistency.png" id="1_thtit"]
 [ext_resource type="Theme" uid="uid://dq1aqm2uflpau" path="res://main_theme.tres" id="1_va41p"]
 [ext_resource type="Script" path="res://gallery/gallery_entry.gd" id="3_vjtdh"]
+[ext_resource type="Script" path="res://button_with_sounds.gd" id="4_gl1u4"]
 
 [node name="GalleryEntry" type="TextureRect" groups=["GalleryEntry"]]
 z_index = 1
@@ -42,6 +43,7 @@ offset_bottom = 62.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "examine"
+script = ExtResource("4_gl1u4")
 
 [node name="Play" type="Button" parent="."]
 visible = false
@@ -58,6 +60,7 @@ offset_bottom = 62.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "play!"
+script = ExtResource("4_gl1u4")
 
 [node name="Back" type="Button" parent="."]
 visible = false
@@ -74,6 +77,7 @@ offset_bottom = 120.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "back"
+script = ExtResource("4_gl1u4")
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 1

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://gmll0q18rrun"]
+[gd_scene load_steps=12 format=3 uid="uid://gmll0q18rrun"]
 
 [ext_resource type="Script" path="res://sounds.gd" id="1_ecqd1"]
 [ext_resource type="AudioStream" uid="uid://jp2et6vwubll" path="res://music/music-game.ogg" id="1_xhomy"]
@@ -9,6 +9,8 @@
 [ext_resource type="AudioStream" uid="uid://d4ddeb15xo8sx" path="res://sounds/release.wav" id="6_ddqg6"]
 [ext_resource type="AudioStream" uid="uid://bw4nfmm28r036" path="res://sounds/ow.wav" id="8_lposj"]
 [ext_resource type="AudioStream" uid="uid://syln8j23okdd" path="res://sounds/hooray.ogg" id="9_annaa"]
+[ext_resource type="AudioStream" uid="uid://cp4bkvgyt8nry" path="res://sounds/button_hover_on.wav" id="10_67xch"]
+[ext_resource type="AudioStream" uid="uid://dmvp322joi6o6" path="res://sounds/button_hover_off.wav" id="11_od4rp"]
 
 [node name="Sounds" type="Node"]
 process_mode = 3
@@ -49,6 +51,18 @@ bus = &"SFX"
 
 [node name="Hooray" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_annaa")
+volume_db = -14.0
+max_polyphony = 8
+bus = &"SFX"
+
+[node name="HoverOn" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_67xch")
+volume_db = -14.0
+max_polyphony = 8
+bus = &"SFX"
+
+[node name="HoverOff" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_od4rp")
 volume_db = -14.0
 max_polyphony = 8
 bus = &"SFX"

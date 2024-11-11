@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://d0wciam5ebgeq"]
+[gd_scene load_steps=4 format=3 uid="uid://d0wciam5ebgeq"]
 
 [ext_resource type="Script" path="res://pause_menu.gd" id="1_olq6u"]
 [ext_resource type="Theme" uid="uid://dq1aqm2uflpau" path="res://main_theme.tres" id="1_qd4gm"]
+[ext_resource type="Script" path="res://button_with_sounds.gd" id="3_dhwor"]
 
 [node name="PauseMenu" type="CanvasLayer"]
 script = ExtResource("1_olq6u")
@@ -41,6 +42,7 @@ offset_bottom = -7.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Restart"
+script = ExtResource("3_dhwor")
 
 [node name="Quit" type="Button" parent="ColorRect"]
 layout_mode = 1
@@ -56,6 +58,7 @@ offset_bottom = 57.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Back to Gallery"
+script = ExtResource("3_dhwor")
 
 [connection signal="pressed" from="ColorRect/Restart" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="ColorRect/Quit" to="." method="_on_quit_pressed"]
