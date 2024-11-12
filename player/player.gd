@@ -105,7 +105,7 @@ func _physics_process(delta):
 	# Horizontal acceleration
 	var direction = Input.get_axis("player_left", "player_right")
 	if is_in_speedrun_mode:
-		direction += speedrun_direction
+		direction = speedrun_direction
 		direction *= 0.3
 	var target_speed = direction * SPEED
 	var accel = H_ACCEL
