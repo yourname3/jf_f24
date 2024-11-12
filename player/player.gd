@@ -19,6 +19,46 @@ var current_held_item = null
 
 var dead = false
 
+var is_in_speedrun_mode = false
+
+var speedrun_detect: Array[StringName] = [
+	"key_f",
+	"key_a",
+	"key_s",
+	"key_t",
+	"key_g",
+	"key_o",
+	"key_f",
+	"key_a",
+	"key_s",
+	"key_t",
+	"key_g",
+	"key_o",
+	"key_f",
+	"key_a",
+	"key_s",
+	"key_t",
+	"key_g",
+	"key_o",
+]
+var speedrun_detect_current = 0
+var speedrun_detect_timer = 0.0
+var speedrun_direction = 1.0
+
+func check_speedrun(delta):
+	if speedrun_detect_current < speedrun_detect.size():
+		if Input.is_action_just_pressed(speedrun_detect[speedrun_detect_current]):
+			speedrun_detect_current += 1
+			speedrun_detect_timer = 0.3
+			
+		speedrun_detect_timer -= delta
+		if speedrun_detect_timer < 0:
+			speedrun_detect_current = 0
+			
+		if speedrun_detect_current >= speedrun_detect.size():
+			is_in_speedrun_mode = not is_in_speedrun_mode
+			speedrun_detect_current = 0
+
 func get_current_direction():
 	# Unless we need to track it separately, this should work.
 	return sprite.scale.x
@@ -40,6 +80,8 @@ func update_item(delta):
 				Sounds.grab.play()
 
 func _physics_process(delta):
+	check_speedrun(delta)
+	
 	# Jump is canceled as soon as we let go of the button.
 	# WE have a minimum jump length though.
 	if not Input.is_action_pressed("player_jump"):
@@ -62,6 +104,9 @@ func _physics_process(delta):
 
 	# Horizontal acceleration
 	var direction = Input.get_axis("player_left", "player_right")
+	if is_in_speedrun_mode:
+		direction += speedrun_direction
+		direction *= 0.3
 	var target_speed = direction * SPEED
 	var accel = H_ACCEL
 	if sign(velocity.x) != sign(target_speed):
@@ -75,6 +120,10 @@ func _physics_process(delta):
 
 	move_and_slide()
 	update_item(delta)
+	
+	if is_in_speedrun_mode:
+		if is_on_wall():
+			speedrun_direction *= -1.0
 	
 	for death_y_node in death_y:
 		if global_position.y > death_y_node.global_position.y:
