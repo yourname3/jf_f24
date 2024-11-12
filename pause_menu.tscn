@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://d0wciam5ebgeq"]
+[gd_scene load_steps=5 format=3 uid="uid://d0wciam5ebgeq"]
 
 [ext_resource type="Script" path="res://pause_menu.gd" id="1_olq6u"]
 [ext_resource type="Theme" uid="uid://dq1aqm2uflpau" path="res://main_theme.tres" id="1_qd4gm"]
 [ext_resource type="Script" path="res://button_with_sounds.gd" id="3_dhwor"]
+[ext_resource type="Script" path="res://bus_volume.gd" id="4_ofh8m"]
 
 [node name="PauseMenu" type="CanvasLayer"]
 script = ExtResource("1_olq6u")
@@ -22,11 +23,11 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -38.5
-offset_top = 48.0
+offset_top = 16.0
 offset_right = 38.5
-offset_bottom = 92.0
+offset_bottom = 60.0
 grow_horizontal = 2
-text = "Paused"
+text = "paused"
 
 [node name="Restart" type="Button" parent="ColorRect"]
 layout_mode = 1
@@ -75,6 +76,68 @@ grow_horizontal = 2
 grow_vertical = 0
 text = "main menu"
 script = ExtResource("3_dhwor")
+
+[node name="MusicSlider" type="HSlider" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -146.0
+offset_top = -186.0
+offset_right = 146.0
+offset_bottom = -170.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_ofh8m")
+
+[node name="SfxSlider" type="HSlider" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -146.0
+offset_top = -121.0
+offset_right = 146.0
+offset_bottom = -105.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_ofh8m")
+bus = &"SFX"
+
+[node name="Label2" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -72.5
+offset_top = -229.0
+offset_right = 72.5
+offset_bottom = -185.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "music volume"
+
+[node name="Label3" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -72.5
+offset_top = -160.0
+offset_right = 72.5
+offset_bottom = -116.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "sfx volume"
+horizontal_alignment = 1
 
 [connection signal="pressed" from="ColorRect/Restart" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="ColorRect/Quit" to="." method="_on_quit_pressed"]
